@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -61,9 +62,14 @@ namespace Login
 
         private void btn_cadastrando_Click(object sender, EventArgs e)
         {
-            while (textBox5.Text != textBox6.Text)
+            if (textBox5.Text != textBox6.Text)
             {
-                MessageBox.Show("Senhas diferentes, tente novamente");
+                DialogResult message = MessageBox.Show("Senhas estão diferentes");
+                if (message == DialogResult.OK)
+                {
+                    Process.GetCurrentProcess().Kill();
+                }
+                //Process.GetCurrentProcess().Kill();
             }
 
             Person newUser = new Person();
