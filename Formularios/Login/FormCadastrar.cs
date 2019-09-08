@@ -64,12 +64,16 @@ namespace Login
         {
             if (textBox5.Text != textBox6.Text)
             {
-                DialogResult message = MessageBox.Show("Senhas estão diferentes");
-                if (message == DialogResult.OK)
+                DialogResult message = MessageBox.Show("Senhas diferentes, tente novamente!", "Erro a o digitar a senha", 
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (DialogResult.OK == message)
                 {
-                    Process.GetCurrentProcess().Kill();
+                    Close();
+                    //Application.Exit();
+
                 }
-                //Process.GetCurrentProcess().Kill();
+
             }
 
             Person newUser = new Person();
