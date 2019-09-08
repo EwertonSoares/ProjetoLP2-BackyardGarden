@@ -8,3 +8,13 @@ C:\Users\EWERTON\Desktop\Backyard garden\Formularios\Login\obj\Debug\Login.cspro
 C:\Users\EWERTON\Desktop\Backyard garden\Formularios\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
 C:\Users\EWERTON\Desktop\Backyard garden\Formularios\Login\obj\Debug\Login.exe
 C:\Users\EWERTON\Desktop\Backyard garden\Formularios\Login\obj\Debug\Login.pdb
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\bin\Debug\Login.exe.config
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\bin\Debug\Login.exe
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\bin\Debug\Login.pdb
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\obj\Debug\Login.csprojAssemblyReference.cache
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\obj\Debug\Login.fmrLogin.resources
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\obj\Debug\Login.exe
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Login\obj\Debug\Login.pdb

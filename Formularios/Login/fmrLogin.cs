@@ -41,5 +41,12 @@ namespace Login
                 MessageBox.Show("Login ou senha invalidos.");
             }
         }
+
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
+            FormCadastrar cadastrar = new FormCadastrar();
+            cadastrar.ShowDialog();
+            //this.Close();
+        }
     }
 }
