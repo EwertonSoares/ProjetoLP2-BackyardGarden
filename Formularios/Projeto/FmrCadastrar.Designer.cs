@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class FormCadastrar
+    partial class FmrCadastrar
     {
         /// <summary>
         /// Required designer variable.
@@ -45,15 +45,15 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 37);
+            this.textBox1.Location = new System.Drawing.Point(21, 37);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 20);
+            this.textBox1.Size = new System.Drawing.Size(153, 20);
             this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 21);
+            this.label1.Location = new System.Drawing.Point(18, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 1;
@@ -62,15 +62,15 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 37);
+            this.textBox2.Location = new System.Drawing.Point(180, 37);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(105, 20);
+            this.textBox2.Size = new System.Drawing.Size(153, 20);
             this.textBox2.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 21);
+            this.label2.Location = new System.Drawing.Point(181, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 3;
@@ -78,23 +78,24 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 76);
+            this.textBox3.Location = new System.Drawing.Point(21, 81);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(105, 20);
+            this.textBox3.Size = new System.Drawing.Size(150, 20);
             this.textBox3.TabIndex = 4;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(134, 81);
+            this.textBox4.Location = new System.Drawing.Point(180, 85);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(105, 20);
+            this.textBox4.Size = new System.Drawing.Size(20, 20);
             this.textBox4.TabIndex = 5;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 104);
+            this.label3.Location = new System.Drawing.Point(18, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 6;
@@ -103,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(131, 104);
+            this.label4.Location = new System.Drawing.Point(177, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 7;
@@ -111,16 +112,17 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(6, 120);
+            this.textBox5.Location = new System.Drawing.Point(21, 124);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(105, 20);
             this.textBox5.TabIndex = 8;
+            this.textBox5.UseSystemPasswordChar = true;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 60);
+            this.label5.Location = new System.Drawing.Point(177, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 9;
@@ -128,16 +130,17 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(134, 120);
+            this.textBox6.Location = new System.Drawing.Point(180, 124);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(105, 20);
             this.textBox6.TabIndex = 10;
+            this.textBox6.UseSystemPasswordChar = true;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(131, 60);
+            this.label6.Location = new System.Drawing.Point(18, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 11;
@@ -146,19 +149,19 @@
             // 
             // btn_cadastrando
             // 
-            this.btn_cadastrando.Location = new System.Drawing.Point(82, 161);
+            this.btn_cadastrando.Location = new System.Drawing.Point(99, 178);
             this.btn_cadastrando.Name = "btn_cadastrando";
-            this.btn_cadastrando.Size = new System.Drawing.Size(75, 23);
+            this.btn_cadastrando.Size = new System.Drawing.Size(135, 23);
             this.btn_cadastrando.TabIndex = 12;
             this.btn_cadastrando.Text = "Cadastrar";
             this.btn_cadastrando.UseVisualStyleBackColor = true;
             this.btn_cadastrando.Click += new System.EventHandler(this.btn_cadastrando_Click);
             // 
-            // FormCadastrar
+            // FmrCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(251, 206);
+            this.ClientSize = new System.Drawing.Size(354, 281);
             this.Controls.Add(this.btn_cadastrando);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox6);
@@ -172,7 +175,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Name = "FormCadastrar";
+            this.Name = "FmrCadastrar";
             this.ShowIcon = false;
             this.Text = "Cadastramento";
             this.Load += new System.EventHandler(this.FormCadastrar_Load);
