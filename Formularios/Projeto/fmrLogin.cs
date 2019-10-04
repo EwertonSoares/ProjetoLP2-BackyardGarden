@@ -32,21 +32,32 @@ namespace Login
             //Conectar banco de dados para trazer usuarios cadastrados
             /*Provavelmente um objeto sera trazido do banco, 
              * talvez seja viavel fazer um forEach*/
+             
+            //Verificando se login e senha são existe no banco de dados
             if (textBox1.Text == "ewerton" && textBox2.Text == "123456")
             {
                 MessageBox.Show("Login efeuado com sucesso");
+                //Abrir tela principal
             }
             else
             {
                 MessageBox.Show("Login ou senha invalidos.");
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            FormCadastrar cadastrar = new FormCadastrar();
+            FmrCadastrar cadastrar = new FmrCadastrar();
             cadastrar.ShowDialog();
             //this.Close();
+        }
+
+        private void editar_Click(object sender, EventArgs e)
+        {
+            fmrEditarPerfil editar = new fmrEditarPerfil();
+            editar.ShowDialog();
         }
     }
 }
