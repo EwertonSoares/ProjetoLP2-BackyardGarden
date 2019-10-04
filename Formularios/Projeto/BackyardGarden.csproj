@@ -46,26 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fmrEditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrEditarPerfil.Designer.cs">
+      <DependentUpon>fmrEditarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmrLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fmrLogin.Designer.cs">
       <DependentUpon>fmrLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCadastrar.cs">
+    <Compile Include="FmrCadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCadastrar.Designer.cs">
-      <DependentUpon>FormCadastrar.cs</DependentUpon>
+    <Compile Include="FmrCadastrar.Designer.cs">
+      <DependentUpon>FmrCadastrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fmrEditarPerfil.resx">
+      <DependentUpon>fmrEditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmrLogin.resx">
       <DependentUpon>fmrLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCadastrar.resx">
-      <DependentUpon>FormCadastrar.cs</DependentUpon>
+    <EmbeddedResource Include="FmrCadastrar.resx">
+      <DependentUpon>FmrCadastrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
