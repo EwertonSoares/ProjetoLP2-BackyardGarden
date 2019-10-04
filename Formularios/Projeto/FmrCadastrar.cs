@@ -72,7 +72,7 @@ namespace Login
             } while (senha != true);
 
             //Verificando se a senha tem menos de 8 caracteries
-            do
+            /*do
             { 
                 if (textBox5.Text.Length < 8 || textBox6.Text.Length < 8)
                 {
@@ -82,7 +82,7 @@ namespace Login
                     MessageBox.Show("Senha deve conter no minimo 8 digitos", "Senha Invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-            } while (senha != true);
+            } while (senha != true);*/
 
 
             //Cadastrando novo usuario
