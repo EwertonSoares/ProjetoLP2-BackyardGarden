@@ -62,5 +62,6 @@ namespace Login
             fmrEditarPerfil editar = new fmrEditarPerfil();
             editar.ShowDialog();
         }
+
     }
 }

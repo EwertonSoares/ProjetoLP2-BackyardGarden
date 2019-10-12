@@ -16,5 +16,16 @@ namespace Login
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Saindo de sua sessão.");
+            Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,7 +42,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Login.Properties.Resources.fmr_Login;
-            this.pictureBox1.Location = new System.Drawing.Point(159, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(153, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,7 +71,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "Usuário";
             // 
             // label2
             // 
@@ -85,7 +85,7 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(140, 186);
+            this.btn_Login.Location = new System.Drawing.Point(136, 197);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(85, 23);
             this.btn_Login.TabIndex = 5;
