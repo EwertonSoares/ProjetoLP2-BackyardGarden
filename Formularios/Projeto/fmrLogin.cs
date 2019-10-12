@@ -38,6 +38,9 @@ namespace Login
             {
                 MessageBox.Show("Login efeuado com sucesso");
                 //Abrir tela principal
+
+                frmPagina pagina = new frmPagina();
+                pagina.ShowDialog();
             }
             else
             {
