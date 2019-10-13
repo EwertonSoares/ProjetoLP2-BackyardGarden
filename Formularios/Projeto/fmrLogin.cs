@@ -32,15 +32,20 @@ namespace Login
             //Conectar banco de dados para trazer usuarios cadastrados
             /*Provavelmente um objeto sera trazido do banco, 
              * talvez seja viavel fazer um forEach*/
-             
+
+            /*foreach(string email in db.getUsers().ToString()){
+                
+            }*/
+
             //Verificando se login e senha são existe no banco de dados
             if (textBox1.Text == "ewerton" && textBox2.Text == "123456")
             {
                 MessageBox.Show("Login efeuado com sucesso");
                 //Abrir tela principal
 
-                frmPagina pagina = new frmPagina();
+                frmPaginaInicial pagina = new frmPaginaInicial();     
                 pagina.ShowDialog();
+          
             }
             else
             {

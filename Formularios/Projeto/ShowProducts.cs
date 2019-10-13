@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class frmPagina : Form
+    public partial class showProducts : Form
     {
-        public frmPagina()
+        BDConnection db = new BDConnection();
+        public showProducts()
         {
             InitializeComponent();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void showProducts_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Saindo de sua sessão.");
-            Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            showData.DataSource = db.getAllUsers();
         }
     }
 }

@@ -34,3 +34,8 @@ C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\obj\Debug\B
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\obj\Debug\BackyardGarden.csproj.CoreCompileInputs.cache
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\obj\Debug\Login.exe
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\obj\Debug\Login.pdb
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\bin\Debug\Mono.Security.dll
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\bin\Debug\Npgsql.dll
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\obj\Debug\Login.frmPaginaInicial.resources
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\obj\Debug\BackyardGarden.csproj.CopyComplete
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Formularios\Projeto\obj\Debug\Login.showProducts.resources
