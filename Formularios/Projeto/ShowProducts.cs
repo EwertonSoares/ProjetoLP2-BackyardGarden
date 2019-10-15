@@ -12,7 +12,7 @@ namespace Login
 {
     public partial class showProducts : Form
     {
-        BDConnection db = new BDConnection();
+        DbConnection db = new DbConnection();
         public showProducts()
         {
             InitializeComponent();
@@ -20,7 +20,21 @@ namespace Login
 
         private void showProducts_Load(object sender, EventArgs e)
         {
-            showData.DataSource = db.getAllUsers();
+            var lista = db.getProducts();
+
+            for(int i = 0; i < lista.Count; i++)
+            {
+                //Criar botão dinamincamente
+                MessageBox.Show(lista[i]);
+            }
+
+            
+
+            /*foreach(var dado in lista)
+            {
+                showData.DataSource = dado;
+            }*/
+            
         }
     }
 }

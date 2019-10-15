@@ -12,6 +12,7 @@ namespace Login
 {
     public partial class fmrLogin : Form
     {
+        DbConnection db = new DbConnection();
         public fmrLogin()
         {
             InitializeComponent();
@@ -29,30 +30,40 @@ namespace Login
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
+            //List<string> users =  new List<string>();
             //Conectar banco de dados para trazer usuarios cadastrados
             /*Provavelmente um objeto sera trazido do banco, 
              * talvez seja viavel fazer um forEach*/
 
-            /*foreach(string email in db.getUsers().ToString()){
-                
+
+
+            /*foreach (string data in db.getAllUsers().Rows)
+            {
+                users.Add(data);
+                MessageBox.Show(users.ToString());
+            }*/
+
+           /* for(int i = 0; i = users; i++)
+            {
+
             }*/
 
             //Verificando se login e senha são existe no banco de dados
-            if (textBox1.Text == "ewerton" && textBox2.Text == "123456")
-            {
-                MessageBox.Show("Login efeuado com sucesso");
+           // if (textBox1.Text == "ewerton" && textBox2.Text == "123456")
+            //{
+                //MessageBox.Show("Login efeuado com sucesso");
                 //Abrir tela principal
 
                 frmPaginaInicial pagina = new frmPaginaInicial();     
                 pagina.ShowDialog();
           
-            }
-            else
-            {
+            //}
+            //else
+           /* {
                 MessageBox.Show("Login ou senha invalidos.");
                 textBox1.Text = "";
                 textBox2.Text = "";
-            }
+            }*/
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)

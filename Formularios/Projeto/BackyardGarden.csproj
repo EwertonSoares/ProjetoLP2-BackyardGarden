@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDConnection.cs" />
+    <Compile Include="DbConnection.cs" />
     <Compile Include="fmrEditarPerfil.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using Npgsql;
+using System.Windows.Forms;
 
 namespace Login
 {
-    class BDConnection
+    class DbConnection
     {
         static string server = "127.0.0.1";
         static string port = "5432";
@@ -15,14 +17,16 @@ namespace Login
         NpgsqlConnection pgsqlConnection = null;
         string conn = null;
 
-        public BDConnection()
+        public DbConnection()
         {
             conn = String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
                 server, port, userName, password, dbName);
         }
 
+        List<string> lista = new List<string>();
+
         //Pegar todos os usuarios registrados
-        public DataTable getAllUsers()
+        public List<string> getProducts()
         {
             DataTable dt = new DataTable();
             pgsqlConnection = new NpgsqlConnection(conn);
@@ -36,6 +40,12 @@ namespace Login
                 using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(select, pgsqlConnection))
                 {
                     Adpt.Fill(dt);
+
+                    for (int i = 0; i < dt.Rows.Count; i++) {
+                            string tabela = (string)dt.Rows[i]["Nome"];
+                            lista.Add(tabela);
+                        }
+
                 }
             }
             catch(NpgsqlException ex)
@@ -52,7 +62,7 @@ namespace Login
                 pgsqlConnection.Close();
             }
 
-            return dt;
+            return lista;
         }
     }
 }
