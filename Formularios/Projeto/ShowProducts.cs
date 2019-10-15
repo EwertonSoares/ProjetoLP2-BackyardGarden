@@ -13,6 +13,8 @@ namespace Login
     public partial class showProducts : Form
     {
         DbConnection db = new DbConnection();
+
+        static int num = 0;
         public showProducts()
         {
             InitializeComponent();
@@ -25,7 +27,31 @@ namespace Login
             for(int i = 0; i < lista.Count; i++)
             {
                 //Criar botão dinamincamente
-                MessageBox.Show(lista[i]);
+                //MessageBox.Show(lista[i]);
+
+                
+                    Button btn = new Button();
+                    btn.Name = "btnHorta" + i;
+                    btn.Text = lista[i];
+                    btn.Width = 100; //Largura
+                    btn.Height = 20; //Altura
+                    
+                //btn.Location = new Point(100, 100);
+                //btn.StyleChanged["Position"] = "Absolute"; //CSS
+                    btn.Top = num; //Posição na tela, se não será criado um ao lado do outro
+                    showData.Controls.Add(btn); //Adicionando o botão
+                    //btn.Click += new EventHandler(Button1_Click); //Evento relacionado ao clicar do botão
+                  
+                    num += 20;
+                
+
+                /*private void Button1_Click(object sender, EventArgs e)
+                {
+                    //Button btn = (Button)sender;
+                    //Response.Write("<script>alert('O botao apertado foi: " + btn.ID.ToString() + "')</script>");
+                }*/
+
+                //showData.Controls.Add()
             }
 
             

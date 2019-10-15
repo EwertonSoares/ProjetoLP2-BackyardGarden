@@ -35,9 +35,9 @@
             // showData
             // 
             this.showData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.showData.Location = new System.Drawing.Point(3, -1);
+            this.showData.Location = new System.Drawing.Point(3, 67);
             this.showData.Name = "showData";
-            this.showData.Size = new System.Drawing.Size(656, 443);
+            this.showData.Size = new System.Drawing.Size(656, 375);
             this.showData.TabIndex = 0;
             // 
             // showProducts
