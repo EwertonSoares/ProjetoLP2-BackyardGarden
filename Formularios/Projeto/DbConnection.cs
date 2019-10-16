@@ -26,7 +26,7 @@ namespace Login
         List<string> lista = new List<string>();
 
         //Pegar todos os usuarios registrados
-        public List<string> getProducts()
+        public List<string> getProductsName(string tableName)
         {
             DataTable dt = new DataTable();
             pgsqlConnection = new NpgsqlConnection(conn);
@@ -35,7 +35,7 @@ namespace Login
             {
                 //Abrindo conexão com p PgSQL e definindo etrutura SQL
                 pgsqlConnection.Open();
-                string select = "Select * from hortalicas order by id";
+                string select = "Select * from " + tableName + " order by id";
 
                 using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(select, pgsqlConnection))
                 {
@@ -44,9 +44,7 @@ namespace Login
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
                         string nome = (string)dt.Rows[i]["Nome"];
-                        //string id = (string)dt.Rows[i]["Nome"];
                         lista.Add(nome);
-                        //lista.Add(id);
                     }
 
                 }

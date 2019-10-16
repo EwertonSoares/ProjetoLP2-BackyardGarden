@@ -15,20 +15,23 @@ namespace Login
         DbConnection db = new DbConnection();
 
         static int num = 0;
-        public showProducts()
+        static string valueParam;
+
+        public showProducts(string value)
         {
+            valueParam = value;
             InitializeComponent();
         }
 
         private void showProducts_Load(object sender, EventArgs e)
         {
-            var lista = db.getProducts();
+            var lista = db.getProductsName(valueParam);
 
             for (int i = 0; i < lista.Count; i++)
             {
 
                 Button btn = new Button();
-                btn.Name = "btnHorta" + i;
+                btn.Name = "btnBg" + i;
                 btn.Text = lista[i].ToUpper();
                 btn.Width = 330; //Largura
                 btn.Height = 50; //Altura
