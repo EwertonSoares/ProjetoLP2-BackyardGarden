@@ -41,21 +41,24 @@ namespace Login
                 {
                     Adpt.Fill(dt);
 
-                    for (int i = 0; i < dt.Rows.Count; i++) {
-                            string tabela = (string)dt.Rows[i]["Nome"];
-                            lista.Add(tabela);
-                        }
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        string nome = (string)dt.Rows[i]["Nome"];
+                        //string id = (string)dt.Rows[i]["Nome"];
+                        lista.Add(nome);
+                        //lista.Add(id);
+                    }
 
                 }
             }
-            catch(NpgsqlException ex)
+            catch (NpgsqlException ex)
             {
                 throw ex;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
-                
+
             }
             finally
             {

@@ -51,9 +51,9 @@
             // 
             // btnHort
             // 
-            this.btnHort.Location = new System.Drawing.Point(74, 78);
+            this.btnHort.Location = new System.Drawing.Point(12, 72);
             this.btnHort.Name = "btnHort";
-            this.btnHort.Size = new System.Drawing.Size(638, 58);
+            this.btnHort.Size = new System.Drawing.Size(330, 58);
             this.btnHort.TabIndex = 2;
             this.btnHort.Text = "Hortaliças";
             this.btnHort.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Location = new System.Drawing.Point(683, 2);
+            this.button3.Location = new System.Drawing.Point(268, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 37);
             this.button3.TabIndex = 3;
@@ -75,24 +75,24 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(74, 199);
+            this.button4.Location = new System.Drawing.Point(12, 172);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(638, 58);
+            this.button4.Size = new System.Drawing.Size(330, 58);
             this.button4.TabIndex = 4;
             this.button4.Text = "Frutosas";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // frmPagina
+            // frmPaginaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 352);
+            this.ClientSize = new System.Drawing.Size(355, 281);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnHort);
             this.Controls.Add(this.btnLogout);
-            this.Name = "frmPagina";
+            this.Name = "frmPaginaInicial";
             this.Text = "Página principal";
             this.ResumeLayout(false);
 
