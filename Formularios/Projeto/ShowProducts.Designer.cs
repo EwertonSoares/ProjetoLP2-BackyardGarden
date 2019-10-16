@@ -34,17 +34,27 @@
             // 
             // showData
             // 
+            this.showData.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
+            this.showData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.showData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.showData.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.showData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.showData.Location = new System.Drawing.Point(3, 67);
+            this.showData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showData.Location = new System.Drawing.Point(1, 1);
             this.showData.Name = "showData";
-            this.showData.Size = new System.Drawing.Size(656, 375);
+            this.showData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.showData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.showData.Size = new System.Drawing.Size(345, 250);
             this.showData.TabIndex = 0;
+            this.showData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showData_CellContentClick);
             // 
             // showProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 446);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(1, 1);
+            this.AutoScrollMinSize = new System.Drawing.Size(5, 5);
+            this.ClientSize = new System.Drawing.Size(346, 263);
             this.Controls.Add(this.showData);
             this.Name = "showProducts";
             this.Text = "Products";
