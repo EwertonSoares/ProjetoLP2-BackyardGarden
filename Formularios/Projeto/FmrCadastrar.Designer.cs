@@ -149,7 +149,7 @@
             // 
             // btn_cadastrando
             // 
-            this.btn_cadastrando.Location = new System.Drawing.Point(99, 178);
+            this.btn_cadastrando.Location = new System.Drawing.Point(109, 178);
             this.btn_cadastrando.Name = "btn_cadastrando";
             this.btn_cadastrando.Size = new System.Drawing.Size(135, 23);
             this.btn_cadastrando.TabIndex = 12;

@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
-            this.editar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,24 +104,11 @@
             this.btn_cadastrar.UseVisualStyleBackColor = false;
             this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
             // 
-            // editar
-            // 
-            this.editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.editar.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.editar.Location = new System.Drawing.Point(283, -2);
-            this.editar.Name = "editar";
-            this.editar.Size = new System.Drawing.Size(70, 20);
-            this.editar.TabIndex = 7;
-            this.editar.Text = "Editar Perfil";
-            this.editar.UseVisualStyleBackColor = false;
-            this.editar.Click += new System.EventHandler(this.editar_Click);
-            // 
             // fmrLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 281);
-            this.Controls.Add(this.editar);
             this.Controls.Add(this.btn_cadastrar);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.label2);
@@ -149,7 +135,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Button btn_cadastrar;
-        private System.Windows.Forms.Button editar;
     }
 }
 
