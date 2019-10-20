@@ -55,7 +55,7 @@
             this.btnHort.Name = "btnHort";
             this.btnHort.Size = new System.Drawing.Size(330, 58);
             this.btnHort.TabIndex = 2;
-            this.btnHort.Text = "Hortaliças";
+            this.btnHort.Text = "HORTALIÇAS";
             this.btnHort.UseVisualStyleBackColor = true;
             this.btnHort.Click += new System.EventHandler(this.btnHort_Click);
             // 
@@ -79,7 +79,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(330, 58);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Frutosas";
+            this.button4.Text = "FRUTICOLAS";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

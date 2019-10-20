@@ -34,7 +34,7 @@ namespace Login
         private void button4_Click(object sender, EventArgs e)
         {
             {
-                string frutosa = "frutosas";
+                string frutosa = "fruticolas";
                 try
                 {
                     exibirHortalicas(frutosa);

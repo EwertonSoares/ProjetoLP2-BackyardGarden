@@ -17,7 +17,7 @@ namespace Login
         {
             InitializeComponent();
         }
-
+   
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -56,10 +56,10 @@ namespace Login
 
         private void btn_cadastrando_Click(object sender, EventArgs e)
         {
-            bool senha = true;
+            //bool senha = true;
 
             //Verificando se a senha e confirmar senha são diferentes
-            do
+           /* do
             {
                 if (textBox5.Text != textBox6.Text)
                 {
@@ -72,7 +72,7 @@ namespace Login
             } while (senha != true);
 
             //Verificando se a senha tem menos de 8 caracteries
-            /*do
+            do
             { 
                 if (textBox5.Text.Length < 8 || textBox6.Text.Length < 8)
                 {
@@ -89,8 +89,8 @@ namespace Login
             bool sucesso = true;
 
                 Usuario novoUsuario = new Usuario();
-                novoUsuario.setUser(textBox1.Text, textBox2.Text, textBox3.Text, 
-                textBox4.Text, textBox5.Text, textBox6.Text);
+                /*novoUsuario.setUser(textBox1.Text, textBox2.Text, textBox3.Text, 
+                textBox4.Text, textBox5.Text, textBox6.Text);*/
 
 
                 /* Enviar objeto para o banco de dados caso o objeto seja salvo
