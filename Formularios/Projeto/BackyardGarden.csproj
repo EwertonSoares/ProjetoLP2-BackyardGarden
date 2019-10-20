@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\Downloads\--\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\Downloads\--\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,26 +52,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbConnection.cs" />
+    <Compile Include="fmrEditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrEditarPerfil.Designer.cs">
+      <DependentUpon>fmrEditarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmrLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fmrLogin.Designer.cs">
       <DependentUpon>fmrLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCadastrar.cs">
+    <Compile Include="FmrCadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCadastrar.Designer.cs">
-      <DependentUpon>FormCadastrar.cs</DependentUpon>
+    <Compile Include="FmrCadastrar.Designer.cs">
+      <DependentUpon>FmrCadastrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs" />
+    <Compile Include="frmPaginaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaginaInicial.Designer.cs">
+      <DependentUpon>frmPaginaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowProducts.Designer.cs">
+      <DependentUpon>ShowProducts.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fmrEditarPerfil.resx">
+      <DependentUpon>fmrEditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmrLogin.resx">
       <DependentUpon>fmrLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCadastrar.resx">
-      <DependentUpon>FormCadastrar.cs</DependentUpon>
+    <EmbeddedResource Include="FmrCadastrar.resx">
+      <DependentUpon>FmrCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaginaInicial.resx">
+      <DependentUpon>frmPaginaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +108,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ShowProducts.resx">
+      <DependentUpon>ShowProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
