@@ -26,22 +26,34 @@ namespace Login
             Close();
         }
 
-        private void exibirHortalicas()
+        private void exibirHortalicas(string value)
         {
-            showProducts products = new showProducts();
+            showProducts products = new showProducts(value);
             products.ShowDialog();
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            {
+                string frutosa = "fruticolas";
+                try
+                {
+                    exibirHortalicas(frutosa);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro : " + ex.Message);
+                }
+            }
 
         }
 
         private void btnHort_Click(object sender, EventArgs e)
         {
             {
+                string hortalica = "hortalicas";
                 try
                 {
-                    exibirHortalicas();
+                    exibirHortalicas(hortalica);
                 }
                 catch (Exception ex)
                 {
