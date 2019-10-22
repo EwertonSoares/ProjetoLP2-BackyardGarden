@@ -32,14 +32,14 @@ namespace Login
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            var users = db.getProductsName("usuarios");
+            var users = db.getProductsName("usuarios", textBox1.Text, textBox2.Text);
 
             /*frmPaginaInicial pagina = new frmPaginaInicial();
             pagina.ShowDialog();*/
             
-            for(int i = 0; i < users.Count; i++)
-            {
-                if (textBox1.Text == users[i] && textBox2.Text == users[i+1])
+            //for(int i = 0; i < users.Count; i++)
+            //{
+                if (users)
                 {
                     textBox1.Text = "";
                     textBox2.Text = "";
@@ -49,12 +49,14 @@ namespace Login
 
                     return;
                 }
+                else {
+                    
+                    MessageBox.Show("Login ou senha invalidos.");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                }
                
-            }
-
-            MessageBox.Show("Login ou senha invalidos.");
-            textBox1.Text = "";
-            textBox2.Text = "";
+            //}
 
         }
 
