@@ -15,14 +15,19 @@ namespace Login
         static string dbName = "BackyardGarden";
 
         static string select;
+        static string email;
+        static string password;
 
         NpgsqlConnection pgsqlConnection = null;
         string conn = null;
 
-        public DbConnection()
+        public DbConnection(string value1, string value2)
         {
             conn = String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
                 server, port, userName, password, dbName);
+
+                email = value1;
+                password = value2;
         }
 
         Usuario users = new Usuario();

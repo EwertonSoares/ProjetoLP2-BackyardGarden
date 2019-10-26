@@ -7,7 +7,7 @@ namespace Login
     internal class Usuario
     {
 
-        /*private string name;
+        private string name;
         private string cidade;
         private string estado;
         private string email;
@@ -18,14 +18,14 @@ namespace Login
 
         public void setUser(string email, string password)
         {
-            //users.Add(emailpassword);
-            //users.Add(emailpassword);
+            //users.Add();
+            //users.Add();
 
         }
 
         public List<string> getUser()
         {
             return users;
-        }*/
+        }
     }
 }
