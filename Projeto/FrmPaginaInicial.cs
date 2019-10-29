@@ -14,7 +14,7 @@ namespace Login
     {
 
         
-        DbConnection db = new DbConnection();
+        UserAccess db = new UserAccess();
         public FrmPaginaInicial()
         {
             InitializeComponent();

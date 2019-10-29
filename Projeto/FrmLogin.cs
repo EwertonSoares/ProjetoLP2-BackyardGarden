@@ -12,7 +12,7 @@ namespace Login
 {
     public partial class FrmLogin : Form
     {
-        DbConnection db = new DbConnection();
+        UserAccess db = new UserAccess();
         public FrmLogin()
         {
             InitializeComponent();

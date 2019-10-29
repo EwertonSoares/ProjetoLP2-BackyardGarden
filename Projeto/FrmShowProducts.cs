@@ -12,7 +12,7 @@ namespace Login
 {
     public partial class showProducts : Form
     {
-        DbConnection db = new DbConnection();
+        UserAccess db = new UserAccess();
 
         static int num = 0;
         static string tableName;

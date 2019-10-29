@@ -56,4 +56,4 @@ C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.frmEd
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.frmLogin.resources
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.frmCadastrar.resources
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.FrmAdmin.resources
-C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.Frm_ShowAdm.resources
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.Frm_ShowAdmInformation.resources
