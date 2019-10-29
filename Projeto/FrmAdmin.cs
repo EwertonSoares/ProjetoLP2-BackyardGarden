@@ -21,8 +21,8 @@ namespace Login
         {
             if (rdb_Adm.Checked == true)
             {
-                Frm_ShowAdm showAdmin = new Frm_ShowAdm("Adm");
-                ShowDialog();
+                Frm_ShowAdmInformation showAdmin = new Frm_ShowAdmInformation("ADM", "ADMINISTRADORES");
+                showAdmin.ShowDialog();
             }
             if(rdb_fert.Checked == true)
             {

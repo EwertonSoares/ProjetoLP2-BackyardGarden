@@ -1,23 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.ComponentModel;
 using Npgsql;
 using NpgsqlTypes;
 
 namespace Login
 {
-    class DbConnection
+    class UserAccess
     {
         Connection connected = new Connection();
 
-        public DbConnection()
-        {
-        }
-
         string select;
-
 
         //Pegar todos os usuarios registrados
         public List<string> getProducts(string tableName)

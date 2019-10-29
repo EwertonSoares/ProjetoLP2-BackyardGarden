@@ -52,9 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
+    <Compile Include="AdminAccess.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="DbConnection.cs" />
+    <Compile Include="UserAccess.cs" />
     <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +85,11 @@
     <Compile Include="FrmPaginaInicial.Designer.cs">
       <DependentUpon>FrmPaginaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_ShowAdm.cs">
+    <Compile Include="Frm_ShowAdmInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ShowAdm.Designer.cs">
-      <DependentUpon>Frm_ShowAdm.cs</DependentUpon>
+    <Compile Include="Frm_ShowAdmInformation.Designer.cs">
+      <DependentUpon>Frm_ShowAdmInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -121,8 +121,8 @@
     <EmbeddedResource Include="FrmPaginaInicial.resx">
       <DependentUpon>FrmPaginaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ShowAdm.resx">
-      <DependentUpon>Frm_ShowAdm.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_ShowAdmInformation.resx">
+      <DependentUpon>Frm_ShowAdmInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
