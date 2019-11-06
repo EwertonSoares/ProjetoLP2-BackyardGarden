@@ -89,7 +89,7 @@ namespace Login
                     //Abra a conexão com o PgSQL                  
                     connected.pgsqlConnection.Open();
 
-                    string cmdInsert = String.Format("Insert Into usuarios (nome,email,password,tipo) values('{0}','{1}','{2}','{3}')", nome, email, pwd, tipo);
+                    string cmdInsert = String.Format("Insert Into usuarios (nome ,email , password, tipo) values('{0}','{1}','{2}','{3}')", nome, email, pwd, tipo);
 
                     using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(cmdInsert, connected.pgsqlConnection))
                     {
@@ -145,7 +145,7 @@ namespace Login
         }
 
         //Deleta registros
-        public void DeletarUserRegistro(int id)
+        public void DeleteUserInformation(int id)
         {
             try
             {
@@ -154,7 +154,7 @@ namespace Login
                     //abre a conexao                
                     connected.pgsqlConnection.Open();
 
-                    string cmdDelete = String.Format("Delete From usuarios Where nome = '{0}'", id);
+                    string cmdDelete = String.Format("Delete From usuarios Where id = {0}", id);
 
                     using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(cmdDelete, connected.pgsqlConnection))
                     {
@@ -175,5 +175,6 @@ namespace Login
                 connected.pgsqlConnection.Close();
             }
         }
+
     }
 }

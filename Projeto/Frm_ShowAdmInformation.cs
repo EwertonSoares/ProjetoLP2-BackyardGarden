@@ -24,12 +24,6 @@ namespace Login
             ViewAll.DataSource = db.getUserInformation();
         }
 
-        private void Frm_ShowAdm_Load(object sender, EventArgs e)
-        {
-            ViewAll.DataSource = db.getUserInformation();
-
-        }
-
         private void btn_show_Click(object sender, EventArgs e)
         {
             try
@@ -56,30 +50,56 @@ namespace Login
             try
             {
                 db.updateUserInformation(int.Parse(id), textBox1.Text, textBox2.Text, textBox3.Text);
-                updateView();
-                //Mensagem();
             }
-            catch (Exception ex)
+            catch (Exception erro)
             {
-                MessageBox.Show("Erro : " + ex.Message);
+                MessageBox.Show("Erro : " + erro.Message);
             }
 
             btn_upd.Enabled = true;
         }
 
+        //Adicionando um usuario administrador
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string tipo = "adm";
+            try
+            {
+                string tipo = "adm";
 
-            db.InsertUserInformation(textBox1.Text, textBox2.Text, textBox3.Text, tipo);
+                db.InsertUserInformation(textBox1.Text, textBox2.Text, textBox3.Text, tipo);
+               
+                MessageBox.Show("Usuarios cadastrado com sucesso");
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
 
-            MessageBox.Show("Usuarios cadastrafo com sucesso");
+
+        private void bnt_delete_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                id = ViewAll.CurrentRow.Cells[0].Value.ToString();
+
+                db.DeleteUserInformation(int.Parse(id));
+
+                MessageBox.Show("Usuario deletado com sucesso");
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro : " + erro.Message);
+            }
+
+
         }
 
         private void btn_sair_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }
