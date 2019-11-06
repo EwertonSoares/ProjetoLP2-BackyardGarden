@@ -13,6 +13,7 @@ namespace Login
 
         string select;
 
+        //Pegando usuario registrado
         public DataTable getUserInformation()
         {
 
@@ -22,7 +23,8 @@ namespace Login
             {
                 //Abrindo conexão com p PgSQL e definindo etrutura SQL
                 connected.pgsqlConnection.Open();
-                select = "Select * from usuarios where tipo = 'adm' order by id";
+                //select = "Select * from usuarios where tipo = 'adm' order by id";
+                select = "Select id, nome, email, password from usuarios where tipo = 'adm' order by nome ASC";
 
                 using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(select, connected.pgsqlConnection))
                 {
@@ -45,38 +47,6 @@ namespace Login
 
             return dt;
         }
-
-        //Pega um registro pelo codigo
-      /*  public DataTable getTableInformation(int id)
-        {
-            try
-            {
-                using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(connected.conn))
-                {
-                    //Abra a conexão com o PgSQL
-                    connected.pgsqlConnection.Open();
-                    string cmdSelect = "Select * from usuarios Where id = " + id;
-
-                    using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(cmdSelect, connected.pgsqlConnection))
-                    {
-                        Adpt.Fill(dt);
-                    }
-                }
-            }
-            catch (NpgsqlException ex)
-            {
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                connected.pgsqlConnection.Close();
-            }
-            return dt;
-        }*/
 
         //Inserir registros
         public void InsertUserInformation(string nome, string email, string pwd, string tipo)
@@ -175,6 +145,38 @@ namespace Login
                 connected.pgsqlConnection.Close();
             }
         }
+
+        //Pega um registro pelo codigo
+        /*  public DataTable getTableInformation(int id)
+          {
+              try
+              {
+                  using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(connected.conn))
+                  {
+                      //Abra a conexão com o PgSQL
+                      connected.pgsqlConnection.Open();
+                      string cmdSelect = "Select * from usuarios Where id = " + id;
+
+                      using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(cmdSelect, connected.pgsqlConnection))
+                      {
+                          Adpt.Fill(dt);
+                      }
+                  }
+              }
+              catch (NpgsqlException ex)
+              {
+                  throw ex;
+              }
+              catch (Exception ex)
+              {
+                  throw ex;
+              }
+              finally
+              {
+                  connected.pgsqlConnection.Close();
+              }
+              return dt;
+          }*/
 
     }
 }
