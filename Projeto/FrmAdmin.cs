@@ -19,9 +19,10 @@ namespace Login
 
         private void btn_entarAdmin_Click(object sender, EventArgs e)
         {
+
             if (rdb_Adm.Checked == true)
             {
-                Frm_ShowAdmInformation showAdmin = new Frm_ShowAdmInformation("ADM", "ADMINISTRADORES");
+                Frm_ShowAdmInformation showAdmin = new Frm_ShowAdmInformation();
                 showAdmin.ShowDialog();
             }
             if(rdb_fert.Checked == true)
