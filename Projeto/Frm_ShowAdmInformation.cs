@@ -12,27 +12,21 @@ namespace Login
 {
     public partial class Frm_ShowAdmInformation : Form
     {
-        int id = 0;
+        string id;
         AdminAccess db = new AdminAccess();
-
-        private string labelName;
-        private string tableName;
-        public Frm_ShowAdmInformation(string labelName, string tableName)
+        public Frm_ShowAdmInformation()
         {
             InitializeComponent();
-
-            this.labelName = labelName;
-            this.tableName = tableName;
         }
 
         private void updateView()
         {
-            ViewAll.DataSource = db.getTableInformation(tableName);
+            ViewAll.DataSource = db.getUserInformation();
         }
 
         private void Frm_ShowAdm_Load(object sender, EventArgs e)
         {
-            ViewAll.DataSource = db.getTableInformation(tableName);
+            ViewAll.DataSource = db.getUserInformation();
 
         }
 
@@ -51,6 +45,8 @@ namespace Login
 
         private void btn_upd_Click(object sender, EventArgs e)
         {
+            id = ViewAll.CurrentRow.Cells[0].Value.ToString();
+        
             if (textBox1.Text == string.Empty || textBox2.Text == string.Empty || textBox3.Text == string.Empty)
             {
                 textBox1.Focus();
@@ -59,7 +55,7 @@ namespace Login
 
             try
             {
-                db.updateInformation("Admistradores", id, textBox2.Text, textBox3.Text);
+                db.updateUserInformation(int.Parse(id), textBox1.Text, textBox2.Text, textBox3.Text);
                 updateView();
                 //Mensagem();
             }
@@ -67,20 +63,22 @@ namespace Login
             {
                 MessageBox.Show("Erro : " + ex.Message);
             }
+
             btn_upd.Enabled = true;
         }
 
-            private void dgvFunci_CellEnter(object sender, DataGridViewCellEventArgs e)
-            {
-                id = Convert.ToInt32(ViewAll.Rows[e.RowIndex].Cells[0].Value);
-                textBox1.Text = Convert.ToString(ViewAll.Rows[e.RowIndex].Cells[1].Value);
-                textBox2.Text = Convert.ToString(ViewAll.Rows[e.RowIndex].Cells[2].Value);
-                textBox3.Text = Convert.ToString(ViewAll.Rows[e.RowIndex].Cells[3].Value);
-            }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
-            db.InsertInformation("Administradores", textBox1.Text, textBox2.Text, textBox3.Text);
+            string tipo = "adm";
+
+            db.InsertUserInformation(textBox1.Text, textBox2.Text, textBox3.Text, tipo);
+
+            MessageBox.Show("Usuarios cadastrafo com sucesso");
+        }
+
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

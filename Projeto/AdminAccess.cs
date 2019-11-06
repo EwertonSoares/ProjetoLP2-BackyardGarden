@@ -13,7 +13,7 @@ namespace Login
 
         string select;
 
-        public DataTable getTableInformation(string tableName)
+        public DataTable getUserInformation()
         {
 
             connected.pgsqlConnection = new NpgsqlConnection(connected.conn);
@@ -22,7 +22,7 @@ namespace Login
             {
                 //Abrindo conexão com p PgSQL e definindo etrutura SQL
                 connected.pgsqlConnection.Open();
-                select = "Select * from " + tableName + " order by id";
+                select = "Select * from usuarios where tipo = 'adm' order by id";
 
                 using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(select, connected.pgsqlConnection))
                 {
@@ -47,7 +47,7 @@ namespace Login
         }
 
         //Pega um registro pelo codigo
-        public DataTable getTableInformation(int id, string tableName)
+      /*  public DataTable getTableInformation(int id)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace Login
                 {
                     //Abra a conexão com o PgSQL
                     connected.pgsqlConnection.Open();
-                    string cmdSelect = "Select * from " + tableName + " Where id = " + id;
+                    string cmdSelect = "Select * from usuarios Where id = " + id;
 
                     using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(cmdSelect, connected.pgsqlConnection))
                     {
@@ -76,10 +76,10 @@ namespace Login
                 connected.pgsqlConnection.Close();
             }
             return dt;
-        }
+        }*/
 
         //Inserir registros
-        public void InsertInformation(string tableName, string nome, string email, string pwd)
+        public void InsertUserInformation(string nome, string email, string pwd, string tipo)
         {
 
             try
@@ -89,13 +89,14 @@ namespace Login
                     //Abra a conexão com o PgSQL                  
                     connected.pgsqlConnection.Open();
 
-                    string cmdInsert = String.Format("Insert Into " + tableName + " (nome,email,password) values('{0}','{1}','{2}')", nome, email, pwd);
+                    string cmdInsert = String.Format("Insert Into usuarios (nome,email,password,tipo) values('{0}','{1}','{2}','{3}')", nome, email, pwd, tipo);
 
                     using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(cmdInsert, connected.pgsqlConnection))
                     {
                         pgsqlcommand.ExecuteNonQuery();
                     }
                 }
+
             }
             catch (NpgsqlException ex)
             {
@@ -110,8 +111,9 @@ namespace Login
                 connected.pgsqlConnection.Close();
             }
         }
+
         //Atualiza registros
-        public void updateInformation(string tableName, int id, string nome, string email)
+        public void updateUserInformation(int id, string nome, string email, string pwd)
         {
             try
             {
@@ -120,7 +122,7 @@ namespace Login
                     //Abra a conexão com o PgSQL                  
                     connected.pgsqlConnection.Open();
 
-                    string cmdUpdate = String.Format("Update " + tableName +" Set email = '" + nome + "' , idade = " + email + " Where id = " + id);
+                    string cmdUpdate = String.Format("Update usuarios Set nome = '" + nome + "' , email = '" + email + "', password = '" + pwd + "' Where id = " + id);
 
                     using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(cmdUpdate, connected.pgsqlConnection))
                     {
@@ -143,7 +145,7 @@ namespace Login
         }
 
         //Deleta registros
-        public void DeletarRegistro(string tableName, string nome)
+        public void DeletarUserRegistro(int id)
         {
             try
             {
@@ -152,7 +154,7 @@ namespace Login
                     //abre a conexao                
                     connected.pgsqlConnection.Open();
 
-                    string cmdDelete = String.Format("Delete From " + tableName + " Where nome = '{0}'", nome);
+                    string cmdDelete = String.Format("Delete From usuarios Where nome = '{0}'", id);
 
                     using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(cmdDelete, connected.pgsqlConnection))
                     {

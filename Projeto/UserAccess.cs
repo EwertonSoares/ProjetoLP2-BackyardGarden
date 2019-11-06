@@ -56,17 +56,18 @@ namespace Login
         }
 
         //Verificando email do usuario
-        public bool verifingUserLogin(string tableName, string email, string pwd)
+        public bool verifingUserLogin(string email, string pwd, string tipo)
         {
             connected.pgsqlConnection = new NpgsqlConnection(connected.conn);
 
             try
             {
-                select = "SELECT COUNT(ID) FROM " + tableName + " WHERE email = @email AND password = @password";
+                select = "SELECT COUNT(ID) FROM usuarios WHERE email = @email AND password = @password And @tipo = tipo";
 
                 NpgsqlCommand cmd = new NpgsqlCommand(select, connected.pgsqlConnection);
                 cmd.Parameters.Add("@email", NpgsqlDbType.Varchar).Value = email;
                 cmd.Parameters.Add("@password", NpgsqlDbType.Varchar).Value = pwd;
+                cmd.Parameters.Add("@tipo", NpgsqlDbType.Varchar).Value = tipo;
 
                 //Abrindo conexão com p PgSQL e definindo etrutura SQL
                 connected.pgsqlConnection.Open();

@@ -19,30 +19,24 @@ namespace Login
         }
         private void btn_Login_Click(object sender, EventArgs e)
         {
+            string typeOfUser = "adm";
+
             if (rdb_user.Checked == true)
             {
-                //Passando tabela usuarios como paramentro
-                bool isAnUser = db.verifingUserLogin("usuarios",textBox1.Text, textBox2.Text);
+                typeOfUser = "user";
+            }
 
-                if (isAnUser)
+            try
+            {
+                //Passando tabela usuarios como paramentro
+                bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
+
+                if (isAnUser && typeOfUser == "user")
                 {
                     FrmPaginaInicial pagina = new FrmPaginaInicial();
                     pagina.ShowDialog();
                 }
-                else
-                {
-                    MessageBox.Show("Login ou senha invalidos.");
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                }
-            }
-
-            if(rdb_Adm.Checked == true)
-            {
-                //Passando tabela administradores como parametro
-                bool isAnUser = db.verifingUserLogin("administradores", textBox1.Text, textBox2.Text);
-                
-                if (isAnUser)
+                else if (isAnUser && typeOfUser == "adm")
                 {
                     FrmAdmin frmAdmin = new FrmAdmin();
                     frmAdmin.ShowDialog();
@@ -54,6 +48,16 @@ namespace Login
                     textBox2.Text = "";
                 }
             }
+            catch (Exception error)
+            {
+                throw error;
+            }
+            finally{
+
+                this.Close();
+            }
+                
+
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
