@@ -41,6 +41,7 @@
             this.btn_upd = new System.Windows.Forms.Button();
             this.btn_sair = new System.Windows.Forms.Button();
             this.btn_show = new System.Windows.Forms.Button();
+            this.bnt_delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAdm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewAll)).BeginInit();
@@ -123,14 +124,13 @@
             this.ViewAll.Name = "ViewAll";
             this.ViewAll.Size = new System.Drawing.Size(370, 174);
             this.ViewAll.TabIndex = 10;
-            this.ViewAll.SelectionChanged += new System.EventHandler(this.Frm_ShowAdm_Load);
             // 
             // btn_add
             // 
             this.btn_add.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_add.Location = new System.Drawing.Point(277, 110);
+            this.btn_add.Location = new System.Drawing.Point(244, 110);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(65, 23);
+            this.btn_add.Size = new System.Drawing.Size(61, 23);
             this.btn_add.TabIndex = 11;
             this.btn_add.Text = "Adicionar";
             this.btn_add.UseVisualStyleBackColor = false;
@@ -139,9 +139,9 @@
             // btn_upd
             // 
             this.btn_upd.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_upd.Location = new System.Drawing.Point(348, 110);
+            this.btn_upd.Location = new System.Drawing.Point(311, 110);
             this.btn_upd.Name = "btn_upd";
-            this.btn_upd.Size = new System.Drawing.Size(67, 23);
+            this.btn_upd.Size = new System.Drawing.Size(47, 23);
             this.btn_upd.TabIndex = 12;
             this.btn_upd.Text = "Editar";
             this.btn_upd.UseVisualStyleBackColor = false;
@@ -163,11 +163,22 @@
             this.btn_show.BackColor = System.Drawing.SystemColors.Control;
             this.btn_show.Location = new System.Drawing.Point(45, 110);
             this.btn_show.Name = "btn_show";
-            this.btn_show.Size = new System.Drawing.Size(101, 23);
+            this.btn_show.Size = new System.Drawing.Size(99, 23);
             this.btn_show.TabIndex = 15;
             this.btn_show.Text = "Atualizar exibição";
             this.btn_show.UseVisualStyleBackColor = false;
             this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
+            // 
+            // bnt_delete
+            // 
+            this.bnt_delete.BackColor = System.Drawing.SystemColors.Control;
+            this.bnt_delete.Location = new System.Drawing.Point(364, 110);
+            this.bnt_delete.Name = "bnt_delete";
+            this.bnt_delete.Size = new System.Drawing.Size(49, 23);
+            this.bnt_delete.TabIndex = 16;
+            this.bnt_delete.Text = "Delete";
+            this.bnt_delete.UseVisualStyleBackColor = false;
+            this.bnt_delete.Click += new System.EventHandler(this.bnt_delete_Click);
             // 
             // Frm_ShowAdmInformation
             // 
@@ -175,6 +186,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(458, 336);
+            this.Controls.Add(this.bnt_delete);
             this.Controls.Add(this.btn_show);
             this.Controls.Add(this.btn_sair);
             this.Controls.Add(this.btn_upd);
@@ -190,7 +202,6 @@
             this.Controls.Add(this.DgvAdm);
             this.Name = "Frm_ShowAdmInformation";
             this.ShowIcon = false;
-            this.Load += new System.EventHandler(this.Frm_ShowAdm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvAdm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewAll)).EndInit();
@@ -214,5 +225,6 @@
         private System.Windows.Forms.Button btn_upd;
         private System.Windows.Forms.Button btn_sair;
         private System.Windows.Forms.Button btn_show;
+        private System.Windows.Forms.Button bnt_delete;
     }
 }
