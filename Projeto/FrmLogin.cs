@@ -12,17 +12,38 @@ namespace Login
 {
     public partial class FrmLogin : Form
     {
-        UserAccess db = new UserAccess();
+        UsersLogin db = new UsersLogin();
         public FrmLogin()
         {
             InitializeComponent();
         }
         private void btn_Login_Click(object sender, EventArgs e)
         {
+            string typeOfUser = "adm";
+
+            if (rdb_Adm.Checked == true)
+            {
+                //Passando tabela administradores como parametro
+                bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
+
+                if (isAnUser)
+                {
+                    FrmAdmin frmAdmin = new FrmAdmin();
+                    frmAdmin.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Login ou senha invalidos.");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                }
+            }
+
             if (rdb_user.Checked == true)
             {
+                typeOfUser = "user";
                 //Passando tabela usuarios como paramentro
-                bool isAnUser = db.verifingUserLogin("usuarios",textBox1.Text, textBox2.Text);
+                bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
 
                 if (isAnUser)
                 {
@@ -37,23 +58,6 @@ namespace Login
                 }
             }
 
-            if(rdb_Adm.Checked == true)
-            {
-                //Passando tabela administradores como parametro
-                bool isAnUser = db.verifingUserLogin("administradores", textBox1.Text, textBox2.Text);
-                
-                if (isAnUser)
-                {
-                    FrmAdmin frmAdmin = new FrmAdmin();
-                    frmAdmin.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Login ou senha invalidos.");
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                }
-            }
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)

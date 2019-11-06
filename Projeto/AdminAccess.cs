@@ -46,37 +46,6 @@ namespace Login
             return dt;
         }
 
-        //Pega um registro pelo codigo
-        public DataTable getTableInformation(int id, string tableName)
-        {
-            try
-            {
-                using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(connected.conn))
-                {
-                    //Abra a conexão com o PgSQL
-                    connected.pgsqlConnection.Open();
-                    string cmdSelect = "Select * from " + tableName + " Where id = " + id;
-
-                    using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(cmdSelect, connected.pgsqlConnection))
-                    {
-                        Adpt.Fill(dt);
-                    }
-                }
-            }
-            catch (NpgsqlException ex)
-            {
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                connected.pgsqlConnection.Close();
-            }
-            return dt;
-        }
 
         //Inserir registros
         public void InsertInformation(string tableName, string nome, string email, string pwd)

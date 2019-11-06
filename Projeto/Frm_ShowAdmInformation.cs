@@ -13,18 +13,17 @@ namespace Login
     public partial class Frm_ShowAdmInformation : Form
     {
         int id = 0;
+
         AdminAccess db = new AdminAccess();
 
-        private string labelName;
-        private string tableName;
-        public Frm_ShowAdmInformation(string labelName, string tableName)
+        string tableName;
+        public Frm_ShowAdmInformation(string table)
         {
             InitializeComponent();
-
-            this.labelName = labelName;
-            this.tableName = tableName;
+            this.tableName = table;
         }
 
+        //Atualizando vizualização
         private void updateView()
         {
             ViewAll.DataSource = db.getTableInformation(tableName);

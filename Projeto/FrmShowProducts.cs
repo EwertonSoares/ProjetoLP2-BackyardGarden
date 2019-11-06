@@ -12,7 +12,7 @@ namespace Login
 {
     public partial class showProducts : Form
     {
-        UserAccess db = new UserAccess();
+        ProductsAccess db = new ProductsAccess();
 
         static int num = 0;
         static string tableName;
@@ -30,7 +30,7 @@ namespace Login
             {
 
                 Button btn = new Button();
-                btn.Name = "btnHorta" + i;
+                btn.Name = i.ToString();
                 btn.Text = lista[i].ToUpper();
                 btn.Width = 330; //Largura
                 btn.Height = 50; //Altura

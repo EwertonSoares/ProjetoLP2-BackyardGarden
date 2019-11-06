@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AdminAccess.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="ProductsAccess.cs" />
     <Compile Include="UserAccess.cs" />
     <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
@@ -106,6 +107,7 @@
     <Compile Include="FrmWelcome.Designer.cs">
       <DependentUpon>FrmWelcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersLogin.cs" />
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
