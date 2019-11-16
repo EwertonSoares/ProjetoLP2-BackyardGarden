@@ -1,0 +1,3 @@
+Bruno passou por aqui
+Bruno passou por aqui novamente
+Esta linha será salva no arquivo
