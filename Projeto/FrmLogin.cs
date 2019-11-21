@@ -47,7 +47,7 @@ namespace Login
 
                 if (isAnUser)
                 {
-                    FrmPaginaInicial pagina = new FrmPaginaInicial();
+                    FrmInicial pagina = new FrmInicial();
                     pagina.ShowDialog();
                 }
                 else

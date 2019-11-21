@@ -54,6 +54,12 @@
   <ItemGroup>
     <Compile Include="AdminAccess.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="FrmInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicial.Designer.cs">
+      <DependentUpon>FrmInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductsAccess.cs" />
     <Compile Include="UserAccess.cs" />
     <Compile Include="FrmAdmin.cs">
@@ -80,11 +86,11 @@
     <Compile Include="FrmCadastrar.Designer.cs">
       <DependentUpon>FrmCadastrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPaginaInicial.cs">
+    <Compile Include="FrmSegundaPagina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPaginaInicial.Designer.cs">
-      <DependentUpon>FrmPaginaInicial.cs</DependentUpon>
+    <Compile Include="FrmSegundaPagina.Designer.cs">
+      <DependentUpon>FrmSegundaPagina.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_ShowAdmInformation.cs">
       <SubType>Form</SubType>
@@ -114,14 +120,17 @@
     <EmbeddedResource Include="FrmEditarPerfil.resx">
       <DependentUpon>FrmEditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicial.resx">
+      <DependentUpon>FrmInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastrar.resx">
       <DependentUpon>FrmCadastrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPaginaInicial.resx">
-      <DependentUpon>FrmPaginaInicial.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSegundaPagina.resx">
+      <DependentUpon>FrmSegundaPagina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ShowAdmInformation.resx">
       <DependentUpon>Frm_ShowAdmInformation.cs</DependentUpon>

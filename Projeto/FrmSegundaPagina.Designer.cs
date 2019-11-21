@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class FrmPaginaInicial
+    partial class FrmSegundaPagina
     {
         /// <summary>
         /// Required designer variable.

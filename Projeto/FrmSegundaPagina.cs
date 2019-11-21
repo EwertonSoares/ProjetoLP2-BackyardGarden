@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class FrmPaginaInicial : Form
+    public partial class FrmSegundaPagina : Form
     {
 
         
         UserAccess db = new UserAccess();
-        public FrmPaginaInicial()
+        public FrmSegundaPagina()
         {
             InitializeComponent();
         }
