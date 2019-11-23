@@ -86,7 +86,7 @@ namespace Login
 
 
             //Cadastrando novo usuario
-            bool sucesso = true;
+          /*  bool sucesso = true;
 
                 Usuario novoUsuario = new Usuario();
                 novoUsuario.setUser(textBox1.Text, textBox2.Text, textBox3.Text, 
@@ -95,7 +95,7 @@ namespace Login
 
                 /* Enviar objeto para o banco de dados caso o objeto seja salvo
                  a variavel "sucesso" deve permancer com valor "true" caso contrario a mesma
-                 deve ser setada para "false". */
+                 deve ser setada para "false". 
 
                 //Exibir mensagem caso o objeto seja salvo ou não
                 if(sucesso)
@@ -112,7 +112,7 @@ namespace Login
                         textBox4.Text = "";
                         textBox5.Text = "";
                         textBox6.Text = "";
-               }
+               }*/
 
         }
 

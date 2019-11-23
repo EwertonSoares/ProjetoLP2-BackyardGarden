@@ -7,7 +7,7 @@ using NpgsqlTypes;
 
 namespace Login
 {
-    class ProductsAccess
+    class ProductsConnection
     {
 
         string select;

@@ -22,6 +22,5 @@ namespace Login
             FrmLogin login = new FrmLogin();
             login.ShowDialog();
         }
-
     }
 }

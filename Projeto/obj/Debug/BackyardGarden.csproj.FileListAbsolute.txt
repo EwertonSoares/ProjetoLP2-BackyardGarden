@@ -43,7 +43,6 @@ C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\bin\Debug\Login.exe.c
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\bin\Debug\Login.exe
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\bin\Debug\Login.pdb
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\BackyardGarden.csprojAssemblyReference.cache
-C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.frmPaginaInicial.resources
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.Properties.Resources.resources
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.showProducts.resources
 C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\BackyardGarden.csproj.GenerateResource.cache
@@ -78,3 +77,7 @@ C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\BackyardGarde
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\BackyardGarden.csproj.CopyComplete
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.exe
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.pdb
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\bin\Debug\Npgsql.pdb
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\bin\Debug\Npgsql.xml
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.FrmInicial.resources
+C:\Users\EWERTON\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.FrmSegundaPagina.resources

@@ -19,17 +19,17 @@ namespace Login
         }
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            string typeOfUser = "adm";
+            string typeOfUser = "USER";
 
-            if (rdb_Adm.Checked == true)
+            if (rdb_user.Checked == true)
             {
-                //Passando tabela administradores como parametro
+                //Passando tabela usuarios como paramentro
                 bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
 
                 if (isAnUser)
                 {
-                    FrmAdmin frmAdmin = new FrmAdmin();
-                    frmAdmin.ShowDialog();
+                    FrmInicial pagina = new FrmInicial();
+                    pagina.ShowDialog();
                 }
                 else
                 {
@@ -39,16 +39,17 @@ namespace Login
                 }
             }
 
-            if (rdb_user.Checked == true)
+            if (rdb_Adm.Checked == true)
             {
-                typeOfUser = "user";
-                //Passando tabela usuarios como paramentro
+                typeOfUser = "ADM";
+
+                //Passando tabela administradores como parametro
                 bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
 
                 if (isAnUser)
                 {
-                    FrmInicial pagina = new FrmInicial();
-                    pagina.ShowDialog();
+                    FrmAdmin frmAdmin = new FrmAdmin();
+                    frmAdmin.ShowDialog();
                 }
                 else
                 {

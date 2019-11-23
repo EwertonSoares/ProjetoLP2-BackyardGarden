@@ -23,64 +23,24 @@ namespace Login
             this.tableName = table;
         }
 
-        //Atualizando vizualização
-        private void updateView()
-        {
-            ViewAll.DataSource = db.getTableInformation(tableName);
-        }
-
         private void Frm_ShowAdm_Load(object sender, EventArgs e)
         {
             ViewAll.DataSource = db.getTableInformation(tableName);
+            ViewAll.Columns["id"].ReadOnly = true;
 
         }
 
-        private void btn_show_Click(object sender, EventArgs e)
+        private void btn_del_Click(object sender, EventArgs e)
         {
-            try
+            foreach (DataGridViewRow item in this.ViewAll.SelectedRows)
             {
-                updateView();
+                ViewAll.Rows.RemoveAt(item.Index);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro : " + ex.Message);
-            }
-
         }
 
-        private void btn_upd_Click(object sender, EventArgs e)
+        private void btn_save_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == string.Empty || textBox2.Text == string.Empty || textBox3.Text == string.Empty)
-            {
-                textBox1.Focus();
-                return;
-            }
-
-            try
-            {
-                db.updateInformation("Admistradores", id, textBox2.Text, textBox3.Text);
-                updateView();
-                //Mensagem();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro : " + ex.Message);
-            }
-            btn_upd.Enabled = true;
+            db.saveInformation();         
         }
-
-            private void dgvFunci_CellEnter(object sender, DataGridViewCellEventArgs e)
-            {
-                id = Convert.ToInt32(ViewAll.Rows[e.RowIndex].Cells[0].Value);
-                textBox1.Text = Convert.ToString(ViewAll.Rows[e.RowIndex].Cells[1].Value);
-                textBox2.Text = Convert.ToString(ViewAll.Rows[e.RowIndex].Cells[2].Value);
-                textBox3.Text = Convert.ToString(ViewAll.Rows[e.RowIndex].Cells[3].Value);
-            }
-
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            db.InsertInformation("Administradores", textBox1.Text, textBox2.Text, textBox3.Text);
-        }
-
     }
 }

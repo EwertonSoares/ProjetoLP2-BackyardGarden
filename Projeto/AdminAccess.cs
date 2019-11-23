@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Windows.Forms;
 using Npgsql;
 
 namespace Login
@@ -8,7 +9,154 @@ namespace Login
     class AdminAccess
     {
         Connection connected = new Connection();
-        DataTable dt = new DataTable();
+
+        private NpgsqlDataAdapter dataAdapter;
+        private DataTable dataTable;
+
+
+
+        //String de conexão com o banco de dados local
+        public DataTable getTableInformation(string tableName) {
+
+            //String com o comado select
+            //string strSelect = "SELECT nome, cpf, endereco, cep FROM tb_cliente";
+            string strSelect = "SELECT * FROM " + tableName;
+
+            //cria a conexão
+            NpgsqlConnection conexao = new NpgsqlConnection(connected.conn); 
+
+            try
+            {
+                //Cria um novo adaptador para os dados na tabela
+                dataAdapter = new NpgsqlDataAdapter();
+                dataAdapter.SelectCommand = new NpgsqlCommand(strSelect, conexao);
+
+
+                //cria os comandos insert update e delete
+                NpgsqlCommandBuilder cmdBuilder = new NpgsqlCommandBuilder(dataAdapter);
+
+                //Diz que iremos utilizar "colchetes" para especificar objetos 
+                //de banco de dados (tabelas, colunas...)cujos nomes contenham caracteres 
+                //como espaços ou símbolos reservados;
+                cmdBuilder.QuotePrefix = "[";
+                cmdBuilder.QuoteSuffix = "]";
+
+                //cria e prenche uma tabela com os dados do banco usando o adaptador
+                dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                //diz para o grid utilizar essa tabela como fonte de dados
+                //gvClientes.DataSource = data_table;
+
+            }
+            //monitora possíveis erros
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+            //fecha a conexão
+            finally
+            {
+                conexao.Close();
+            }
+
+            return dataTable;
+        }
+
+        public void saveInformation()
+        {
+            MessageBox.Show(dataTable.ToString());
+
+            try
+            {
+                dataAdapter.Update(dataTable);
+
+            }
+            catch(NpgsqlException ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+
+        }
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* DataTable dt = new DataTable();
 
 
         string select;
@@ -143,4 +291,4 @@ namespace Login
             }
         }
     }
-}
+}*/
