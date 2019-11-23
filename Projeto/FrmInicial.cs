@@ -22,5 +22,10 @@ namespace Login
             FrmSegundaPagina segunda = new FrmSegundaPagina();
             segunda.ShowDialog();
         }
+
+        private void btn_mylist_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

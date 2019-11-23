@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Security">
       <HintPath>..\..\..\..\Downloads\--\Mono.Security.dll</HintPath>
     </Reference>
@@ -60,6 +63,7 @@
     <Compile Include="FrmInicial.Designer.cs">
       <DependentUpon>FrmInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="NovoRelatorio.cs" />
     <Compile Include="ProductsConnection.cs" />
     <Compile Include="UserAccess.cs" />
     <Compile Include="FrmAdmin.cs">
@@ -150,6 +154,7 @@
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
