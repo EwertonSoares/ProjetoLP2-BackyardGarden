@@ -13,6 +13,7 @@ namespace Login
     public partial class showProducts : Form
     {
         DbConnection db = new DbConnection();
+        NovoRelatorio relatorio = new NovoRelatorio()
 
         static int num = 0;
         static string valueParam;

@@ -33,7 +33,7 @@ namespace Login
             doc.Open();
 
             //Adicionando imagem no arquivo
-            string logo = "o caminho onde esta a imagem";
+            string logo = "https://cdn.pixabay.com/photo/2015/11/26/20/29/sol-1064482_960_720.png";
             Image img = Image.GetInstance(logo);
             img.ScaleAbsolute(100, 150);
             doc.Add(img);

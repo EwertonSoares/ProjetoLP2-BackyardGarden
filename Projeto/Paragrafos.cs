@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
+/*using System.Collections.Generic;
 using System.Data;
 using Npgsql;
-using NpgsqlTypes;
+using NpgsqlTypes;*/
 
-namespace Login
+namespace testePdf
 {
     class Paragrafos
     {
@@ -12,7 +12,7 @@ namespace Login
 
     public string primeiroParagrafo()
     {
-        string texto = "O texto e tabelas apresentados a seguir tratam das opções anotadas +  
+        return "O texto e tabelas apresentados a seguir tratam das opções anotadas +  
         "pelo usuário para o plantio em áreas sob sua responsabilidade. De forma " +  
         "alguma, pretende-se esgotar o assunto, devido a complexidade do tema " +
         "mas apenas fornecer as orientações gerais para facilitar os tratos " +
@@ -21,20 +21,16 @@ namespace Login
         "ocorrências inesperadas, como pragas e/ou doenças.Nesse sentido, " +
         "fornecemos, na forma de uma tabela, as principais características e " +
         "exigências específicas das espécies escolhidas.";
-
-        return texto;
     }
 
     public string segundoParagrafo()
     {
-        string texto = "Esta tabela deve buscar as opções dos usuários e copiar as " +
+        return "Esta tabela deve buscar as opções dos usuários e copiar as " +
         "informações das tabelas criadas. Atenção especial deve ser dada às colunas " +
         "Semeadura Direta e Transplante época. A data de plantio deve ser informada "+
         "pelo usuário e a coluna Previsão de Colheita será calculada pelos dados das "
         "tabelas básicas criadas. Pode ser extendida até o final das suas opções, lembrando "+
         "apenas de separar Hortaliças de Frutas, pois as colunas são diferentes..";
-
-        return texto;
     }
 
     public string terceiroParagrafo()
@@ -58,9 +54,10 @@ namespace Login
 
     public string quintoParagrafo()
     {
-        return = "Nesta tabela relacionamos os fertilizantes naturais indicados para todas as culturas com as respectivas dosagens. As dosagens foram fornecidas em volume para facilitar o manuseio, 
-        "já que fica mais difícil pesar e isso é condicionado pelo teor de umidade destes produtos. "+ 
-        "Algumas recomendações importantes:\n"+
+        return "Nesta tabela relacionamos os fertilizantes naturais indicados para todas as 
+        "culturas com as respectivas dosagens. As dosagens foram fornecidas em volume "+
+        "para facilitar o manuseio, já que fica mais difícil pesar e isso é "+
+        "condicionado pelo teor de umidade destes produtos. Algumas recomendações importantes:\n"+
         "1. Sempre aplicar os fertilizantes de plantio cerca de 15 a 20 dias antes do plantio, "+ 
         "misturando-os à terra, numa profundidade de cerca de 10 cm, irrigando diariamente para "+
         "terminar a “cura” dos mesmos. Após esse período, as mudas ou sementes poderão ser plantadas.\n"
@@ -88,12 +85,12 @@ namespace Login
 
     public string segundoTitulo()
     {
-        return = "Recomendamos a leitura cuidadosa dessas recomendações iniciais, visando o máximo aproveitamento com um mínimo de riscos.";
+        return "Recomendamos a leitura cuidadosa dessas recomendações iniciais, visando o máximo aproveitamento com um mínimo de riscos.";
     }
 
     public string setimoParagrafo()
     {
-        return = "1. Para se obter o máximo de rendimento da(s) espécie(s) escolhidas para plantio, "+
+        return "1. Para se obter o máximo de rendimento da(s) espécie(s) escolhidas para plantio, "+
         "observar a(s) recomendação(ões) da(s) época(s) sugeridas. Eventualmente pode-se plantar em "+
         "outras épocas, implicando isso no aumento considerável de riscos de eventos climáticos, "+
         "pragas e doenças que normalmente não ocorreriam e consequente perdas na produção.\n"
@@ -125,9 +122,7 @@ namespace Login
         "9. A irrigação, sempre que possível, deve-se evitar o impacto direto de jatos na terra, "+
         "o que pode causar erosão e selamento superficial. Para tanto, procurar adaptar na ponta da "+
         "mangueira um “chuveirinho” e reduzir a pressão para melhorar a eficiência e o aproveitamento da água.";
-    }
-
-    
+    }  
 
     }
 }
