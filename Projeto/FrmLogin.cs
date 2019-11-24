@@ -12,31 +12,41 @@ namespace Login
 {
     public partial class FrmLogin : Form
     {
-        UserAccess db = new UserAccess();
+        UsersLogin db = new UsersLogin();
         public FrmLogin()
         {
             InitializeComponent();
         }
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            string typeOfUser = "adm";
+            string typeOfUser = "USER";
 
             if (rdb_user.Checked == true)
-            {
-                typeOfUser = "user";
-            }
-
-            try
             {
                 //Passando tabela usuarios como paramentro
                 bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
 
-                if (isAnUser && typeOfUser == "user")
+                if (isAnUser)
                 {
-                    FrmPaginaInicial pagina = new FrmPaginaInicial();
+                    FrmInicial pagina = new FrmInicial();
                     pagina.ShowDialog();
                 }
-                else if (isAnUser && typeOfUser == "adm")
+                else
+                {
+                    MessageBox.Show("Login ou senha invalidos.");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                }
+            }
+
+            if (rdb_Adm.Checked == true)
+            {
+                typeOfUser = "ADM";
+
+                //Passando tabela administradores como parametro
+                bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
+
+                if (isAnUser)
                 {
                     FrmAdmin frmAdmin = new FrmAdmin();
                     frmAdmin.ShowDialog();
@@ -48,15 +58,6 @@ namespace Login
                     textBox2.Text = "";
                 }
             }
-            catch (Exception error)
-            {
-                throw error;
-            }
-            finally{
-
-                this.Close();
-            }
-                
 
         }
 

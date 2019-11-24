@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Security">
       <HintPath>..\..\..\..\Downloads\--\Mono.Security.dll</HintPath>
     </Reference>
@@ -54,6 +57,14 @@
   <ItemGroup>
     <Compile Include="AdminAccess.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="FrmInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicial.Designer.cs">
+      <DependentUpon>FrmInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovoRelatorio.cs" />
+    <Compile Include="ProductsConnection.cs" />
     <Compile Include="UserAccess.cs" />
     <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
@@ -79,11 +90,11 @@
     <Compile Include="FrmCadastrar.Designer.cs">
       <DependentUpon>FrmCadastrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPaginaInicial.cs">
+    <Compile Include="FrmSegundaPagina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPaginaInicial.Designer.cs">
-      <DependentUpon>FrmPaginaInicial.cs</DependentUpon>
+    <Compile Include="FrmSegundaPagina.Designer.cs">
+      <DependentUpon>FrmSegundaPagina.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_ShowAdmInformation.cs">
       <SubType>Form</SubType>
@@ -91,7 +102,6 @@
     <Compile Include="Frm_ShowAdmInformation.Designer.cs">
       <DependentUpon>Frm_ShowAdmInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmShowProducts.cs">
@@ -100,17 +110,21 @@
     <Compile Include="FrmShowProducts.Designer.cs">
       <DependentUpon>FrmShowProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmWelcome.cs">
+    <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmWelcome.Designer.cs">
-      <DependentUpon>FrmWelcome.cs</DependentUpon>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersLogin.cs" />
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarPerfil.resx">
       <DependentUpon>FrmEditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicial.resx">
+      <DependentUpon>FrmInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -118,8 +132,8 @@
     <EmbeddedResource Include="FrmCadastrar.resx">
       <DependentUpon>FrmCadastrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPaginaInicial.resx">
-      <DependentUpon>FrmPaginaInicial.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSegundaPagina.resx">
+      <DependentUpon>FrmSegundaPagina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ShowAdmInformation.resx">
       <DependentUpon>Frm_ShowAdmInformation.cs</DependentUpon>
@@ -137,9 +151,10 @@
     <EmbeddedResource Include="FrmShowProducts.resx">
       <DependentUpon>FrmShowProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmWelcome.resx">
-      <DependentUpon>FrmWelcome.cs</DependentUpon>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

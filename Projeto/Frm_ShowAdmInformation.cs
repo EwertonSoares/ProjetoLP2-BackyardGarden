@@ -12,123 +12,35 @@ namespace Login
 {
     public partial class Frm_ShowAdmInformation : Form
     {
-        string id;
+        int id = 0;
+
         AdminAccess db = new AdminAccess();
-        public Frm_ShowAdmInformation()
+
+        string tableName;
+        public Frm_ShowAdmInformation(string table)
         {
             InitializeComponent();
+            this.tableName = table;
         }
 
-        //Atualizando exibição dos dados
-        private void updateView()
+        private void Frm_ShowAdm_Load(object sender, EventArgs e)
         {
-            if (ViewAll.Rows.Count.Equals(0))
-            {
-
-                ViewAll.DataSource = db.getUserInformation();
-            }
-            else
-            {
-                for (int i = 0; i < ViewAll.RowCount; i++)
-                {
-                    ViewAll.Rows[i].DataGridView.Columns.Clear();
-                    //ViewAll.Rows.Clear();
-                    //ViewAll.Refresh();
-
-                }
-            }
-
-            }
-
-        //Limpar exibição dos dados
-        /*private void clearView()
-        {
-            for (int i = 0; i < ViewAll.RowCount; i++)
-           {
-                ViewAll.Rows[i].DataGridView.Columns.Clear();
-               // ViewAll.Refresh();
-            //ViewAll.Rows.Clear();
-           }
-        }*/
-
-        //Evento para atualizar exebição
-        private void btn_show_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                updateView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro : " + ex.Message);
-            }
+            ViewAll.DataSource = db.getTableInformation(tableName);
+            ViewAll.Columns["id"].ReadOnly = true;
 
         }
 
-        //Evento para atualizar informações do usuario
-        private void btn_upd_Click(object sender, EventArgs e)
+        private void btn_del_Click(object sender, EventArgs e)
         {
-            id = ViewAll.CurrentRow.Cells[0].Value.ToString();
-        
-            if (textBox1.Text == string.Empty || textBox2.Text == string.Empty || textBox3.Text == string.Empty)
+            foreach (DataGridViewRow item in this.ViewAll.SelectedRows)
             {
-                textBox1.Focus();
-                return;
-            }
-
-            try
-            {
-                db.updateUserInformation(int.Parse(id), textBox1.Text, textBox2.Text, textBox3.Text);
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro : " + erro.Message);
-            }
-
-            //btn_upd.Enabled = true;
-        }
-
-        //Evento para adicionar um usuario
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string tipo = "adm";
-
-                db.InsertUserInformation(textBox1.Text, textBox2.Text, textBox3.Text, tipo);
-               
-                MessageBox.Show("Usuarios cadastrado com sucesso");
-            }
-            catch (Exception error)
-            {
-                throw error;
+                ViewAll.Rows.RemoveAt(item.Index);
             }
         }
 
-        //Evento para deletar um usuario
-        private void bnt_delete_Click(object sender, EventArgs e)
+        private void btn_save_Click(object sender, EventArgs e)
         {
-            id = ViewAll.CurrentRow.Cells[0].Value.ToString();
-
-            try
-            { 
-
-                db.DeleteUserInformation(int.Parse(id));
-
-                MessageBox.Show("Usuario deletado com sucesso");
-                //clearView();
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro : " + erro.Message);
-            }
-
-        }
-
-        //Evento para sair da tela de administrador
-        private void btn_sair_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            db.saveInformation();         
         }
     }
 }
