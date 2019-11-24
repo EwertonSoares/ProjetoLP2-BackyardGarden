@@ -1341,6 +1341,11 @@
             <param name="disposing"><b>true</b> when called from Dispose();
             <b>false</b> when being called from the finalizer.</param>
         </member>
+        <member name="M:Npgsql.NpgsqlConnection.DisposeAsync">
+            <summary>
+            Releases all resources used by the <see cref="T:Npgsql.NpgsqlConnection">NpgsqlConnection</see>.
+            </summary>
+        </member>
         <member name="E:Npgsql.NpgsqlConnection.Notice">
              <summary>
              Fires when PostgreSQL notices are received from PostgreSQL.
@@ -2968,6 +2973,11 @@
             </summary>
         </member>
         <member name="M:Npgsql.NpgsqlDataReader.Dispose(System.Boolean)">
+            <summary>
+            Releases the resources used by the <see cref="T:Npgsql.NpgsqlDataReader">NpgsqlDataReader</see>.
+            </summary>
+        </member>
+        <member name="M:Npgsql.NpgsqlDataReader.DisposeAsync">
             <summary>
             Releases the resources used by the <see cref="T:Npgsql.NpgsqlDataReader">NpgsqlDataReader</see>.
             </summary>
@@ -4645,6 +4655,11 @@
             <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
         </member>
         <member name="M:Npgsql.NpgsqlTransaction.Dispose(System.Boolean)">
+            <summary>
+            Disposes the transaction, rolling it back if it is still pending.
+            </summary>
+        </member>
+        <member name="M:Npgsql.NpgsqlTransaction.DisposeAsync">
             <summary>
             Disposes the transaction, rolling it back if it is still pending.
             </summary>

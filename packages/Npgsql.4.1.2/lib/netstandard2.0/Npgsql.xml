@@ -3436,16 +3436,6 @@
             Returns a strongly typed <see cref="T:System.Data.Common.DbDataAdapter"/> instance.
             </summary>
         </member>
-        <member name="P:Npgsql.NpgsqlFactory.CanCreateDataAdapter">
-            <summary>
-            Specifies whether the specific <see cref="T:System.Data.Common.DbProviderFactory"/> supports the <see cref="T:System.Data.Common.DbDataAdapter"/> class.
-            </summary>
-        </member>
-        <member name="P:Npgsql.NpgsqlFactory.CanCreateCommandBuilder">
-            <summary>
-            Specifies whether the specific <see cref="T:System.Data.Common.DbProviderFactory"/> supports the <see cref="T:System.Data.Common.DbCommandBuilder"/> class.
-            </summary>
-        </member>
         <member name="M:Npgsql.NpgsqlFactory.GetService(System.Type)">
             <summary>
             Gets the service object of the specified type.
@@ -5844,18 +5834,6 @@
         <member name="M:Npgsql.TypeHandlers.ByteaHandler.Write(System.ArraySegment{System.Byte},Npgsql.NpgsqlWriteBuffer,Npgsql.NpgsqlLengthCache,Npgsql.NpgsqlParameter,System.Boolean)">
             <inheritdoc />
         </member>
-        <member name="M:Npgsql.TypeHandlers.ByteaHandler.ValidateAndGetLength(System.Memory{System.Byte},Npgsql.NpgsqlLengthCache@,Npgsql.NpgsqlParameter)">
-            <inheritdoc />
-        </member>
-        <member name="M:Npgsql.TypeHandlers.ByteaHandler.ValidateAndGetLength(System.ReadOnlyMemory{System.Byte},Npgsql.NpgsqlLengthCache@,Npgsql.NpgsqlParameter)">
-            <inheritdoc />
-        </member>
-        <member name="M:Npgsql.TypeHandlers.ByteaHandler.Write(System.ReadOnlyMemory{System.Byte},Npgsql.NpgsqlWriteBuffer,Npgsql.NpgsqlLengthCache,Npgsql.NpgsqlParameter,System.Boolean)">
-            <inheritdoc />
-        </member>
-        <member name="M:Npgsql.TypeHandlers.ByteaHandler.Write(System.Memory{System.Byte},Npgsql.NpgsqlWriteBuffer,Npgsql.NpgsqlLengthCache,Npgsql.NpgsqlParameter,System.Boolean)">
-            <inheritdoc />
-        </member>
         <member name="P:Npgsql.TypeHandlers.CompositeHandlers.IMappedCompositeHandler.CompositeType">
             <summary>
             The CLR type mapped to the PostgreSQL composite type.
@@ -8148,6 +8126,18 @@
             Returns a string that represents the current object.
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:Npgsql.Util.StringBuilderExtensions">
+            <summary>
+            A set of extension methods to <see cref="T:System.Text.StringBuilder"/> to allow runtime compatibility.
+            </summary>
+        </member>
+        <member name="M:Npgsql.Util.StringBuilderExtensions.Append(System.Text.StringBuilder,System.ReadOnlySpan{System.Char})">
+            <summary>
+            Appends the provided <see cref="T:System.ReadOnlySpan`1"/> to the <see cref="T:System.Text.StringBuilder"/>.
+            </summary>
+            <param name="stringBuilder">The <see cref="T:System.Text.StringBuilder"/> to append to.</param>
+            <param name="span">The <see cref="T:System.ReadOnlySpan`1"/> to append.</param>
         </member>
         <member name="M:Npgsql.Util.VersionExtensions.IsGreaterOrEqual(System.Version,System.Int32,System.Int32,System.Int32)">
             <summary>
