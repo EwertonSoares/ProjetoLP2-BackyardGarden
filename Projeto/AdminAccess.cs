@@ -65,7 +65,6 @@ namespace Login
 
         public void saveInformation()
         {
-            MessageBox.Show(dataTable.ToString());
 
             try
             {

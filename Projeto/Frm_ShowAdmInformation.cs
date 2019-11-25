@@ -12,9 +12,8 @@ namespace Login
 {
     public partial class Frm_ShowAdmInformation : Form
     {
-        int id = 0;
-
         AdminAccess db = new AdminAccess();
+        NovoRelatorio novoRel = new NovoRelatorio();
 
         string tableName;
         public Frm_ShowAdmInformation(string table)
@@ -41,6 +40,11 @@ namespace Login
         private void btn_save_Click(object sender, EventArgs e)
         {
             db.saveInformation();         
+        }
+
+        private void btn_Test_Click(object sender, EventArgs e)
+        {
+            novoRel.gerarRelatorio("Teste");
         }
     }
 }
