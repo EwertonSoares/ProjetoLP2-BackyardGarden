@@ -39,8 +39,8 @@
     <Reference Include="Mono.Security">
       <HintPath>..\..\..\..\Downloads\--\Mono.Security.dll</HintPath>
     </Reference>
-    <Reference Include="Npgsql">
-      <HintPath>..\..\..\..\Downloads\--\Npgsql.dll</HintPath>
+    <Reference Include="Npgsql, Version=4.1.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.1.2\lib\net461\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,6 +64,7 @@
       <DependentUpon>FrmInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="NovoRelatorio.cs" />
+    <Compile Include="Paragrafos.cs" />
     <Compile Include="ProductsConnection.cs" />
     <Compile Include="UserAccess.cs" />
     <Compile Include="FrmAdmin.cs">
@@ -170,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fmr_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

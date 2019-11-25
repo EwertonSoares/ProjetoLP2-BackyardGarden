@@ -13,7 +13,7 @@ namespace Login
     public partial class showProducts : Form
     {
 
-
+        NovoRelatorio novoRel = new NovoRelatorio();
         ProductsConnection db = new ProductsConnection();
 
 static int num = 0;
@@ -49,7 +49,14 @@ private void showProducts_Load(object sender, EventArgs e)
 void btn_Click(object sender, EventArgs e)
 {
      Button btn = (Button)sender;
-    MessageBox.Show("Testando Evento");
+
+    string nomeRel = btn.Text;
+
+    novoRel.gerarRelatorio(nomeRel.ToLower());
+
+    MessageBox.Show("Relatorio gerado com sucesso");
+
+    System.Diagnostics.Process.Start(novoRel.caminho);
 }
 
     }

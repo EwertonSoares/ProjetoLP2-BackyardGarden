@@ -34,6 +34,7 @@
             this.btn_del = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
+            this.btn_Test = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAdm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewAll)).BeginInit();
@@ -97,12 +98,24 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
+            // btn_Test
+            // 
+            this.btn_Test.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Test.Location = new System.Drawing.Point(300, 50);
+            this.btn_Test.Name = "btn_Test";
+            this.btn_Test.Size = new System.Drawing.Size(88, 25);
+            this.btn_Test.TabIndex = 15;
+            this.btn_Test.Text = "Teste";
+            this.btn_Test.UseVisualStyleBackColor = false;
+            this.btn_Test.Click += new System.EventHandler(this.btn_Test_Click);
+            // 
             // Frm_ShowAdmInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(458, 336);
+            this.Controls.Add(this.btn_Test);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_del);
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Button btn_del;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_Test;
     }
 }
