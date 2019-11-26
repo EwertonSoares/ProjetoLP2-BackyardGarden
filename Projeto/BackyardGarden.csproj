@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NovaFrutifera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaFrutifera.Designer.cs">
+      <DependentUpon>NovaFrutifera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovaHortalica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaHortalica.Designer.cs">
+      <DependentUpon>NovaHortalica.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminAccess.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="FrmInicial.cs">
@@ -97,11 +109,11 @@
     <Compile Include="FrmSegundaPagina.Designer.cs">
       <DependentUpon>FrmSegundaPagina.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_ShowAdmInformation.cs">
+    <Compile Include="Frm_ShowTableInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ShowAdmInformation.Designer.cs">
-      <DependentUpon>Frm_ShowAdmInformation.cs</DependentUpon>
+    <Compile Include="Frm_ShowTableInformation.Designer.cs">
+      <DependentUpon>Frm_ShowTableInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,6 +130,12 @@
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="UsersLogin.cs" />
+    <EmbeddedResource Include="NovaFrutifera.resx">
+      <DependentUpon>NovaFrutifera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaHortalica.resx">
+      <DependentUpon>NovaHortalica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,8 +154,8 @@
     <EmbeddedResource Include="FrmSegundaPagina.resx">
       <DependentUpon>FrmSegundaPagina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ShowAdmInformation.resx">
-      <DependentUpon>Frm_ShowAdmInformation.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_ShowTableInformation.resx">
+      <DependentUpon>Frm_ShowTableInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

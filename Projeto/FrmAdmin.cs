@@ -19,30 +19,28 @@ namespace Login
 
         private void btn_entarAdmin_Click(object sender, EventArgs e)
         {
-            string table;
 
             if (rdb_Adm.Checked == true)
             {
-                table = "usuarios";
-                Frm_ShowAdmInformation showAdmin = new Frm_ShowAdmInformation(table);
+                string table = "usuarios";
+                Frm_ShowTableInformation showAdmin = new Frm_ShowTableInformation(table);
                 showAdmin.ShowDialog();
-            }
-            if(rdb_fert.Checked == true)
-            {
-
             }
             if(rdb_frut.Checked == true)
             {
-
+                string pragas = "pragas";
+                string doencas = "doencas";
+                string fontes = "fontes";
+                NovaHortalica nova = new NovaHortalica(pragas);
+                nova.ShowDialog();
             }
             if(rdb_hort.Checked == true)
             {
-
+                table = "hortalicas";
+                NovaHortalica nova = new NovaHortalica(table);
+                nova.ShowDialog();
             }
-            if(rdb_pest.Checked == true)
-            {
-
-            }
+  
         }
     }
 }
