@@ -23,26 +23,23 @@ namespace Login
 
             if (rdb_Adm.Checked == true)
             {
-                table = "usuarios";
-                Frm_ShowAdmInformation showAdmin = new Frm_ShowAdmInformation(table);
+                Frm_ShowTableInformation showAdmin = new Frm_ShowTableInformation("USUARIOS");
                 showAdmin.ShowDialog();
-            }
-            if(rdb_fert.Checked == true)
-            {
-
             }
             if(rdb_frut.Checked == true)
             {
-
+                //table = "pragas";
+                /*NovaHortalica nova = new NovaHortalica("DOENÇAS", "FONTES", "PRAGAS");
+                nova.ShowDialog();*/
             }
             if(rdb_hort.Checked == true)
             {
-
+                //table = "hortalicas";
+                NovaHortalica nova = new NovaHortalica();
+                nova.ShowDialog();
             }
-            if(rdb_pest.Checked == true)
-            {
-
-            }
+  
         }
+
     }
 }
