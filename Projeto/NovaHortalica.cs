@@ -12,51 +12,54 @@ namespace Login
 {
     public partial class NovaHortalica : Form
     {
-        private string tablePragas;
-        private string tableDoencas;
-        private string tableFontes;
-
-        public NovaHortalica(string tablePragas, string tableDoencas, string tableFontes)
+        public NovaHortalica()
         {
             InitializeComponent();
-
-            this.tablePragas = tablePragas;
         }
 
+        List<string> tabela = new List<string>();
+        int i;
+        int f = 0;
         ProductsConnection conn = new ProductsConnection();
         private void AdicionandoProduto_Load(object sender, EventArgs e)
         {
-            List<string> tabelas = new List<string>();
+            getDoencas();
+            getFontes();
+            getPragas();
 
-            tabelas = conn.getProducts(tablePragas);
+        }
 
-            foreach(string item in tabelas)
+        private void getDoencas()
+        {
+            tabela = conn.getProducts("DOENÇAS");
+
+            for(i = 0; i < tabela.Count; i++)
             {
-                Fontes.Items.Add(item);
+                DoenÇas.Items.Add(tabela[i]);
             }
+
+        }
+        
+        private void getFontes() {
             
+            tabela = conn.getProducts("FONTES");
 
-            tabelas = conn.getProducts(tablePragas);
 
-            foreach (string item in tabelas)
+            for (f = i; f < tabela.Count; f++)
             {
-                Pragas.Items.Add(item);
+               Fontes.Items.Add(tabela[f]);
             }
+        }
 
+        private void getPragas()
+        {
 
-            tabelas = conn.getProducts(tableDoencas);
+            tabela = conn.getProducts("PRAGAS");
 
-            foreach (string item in tabelas)
+            for (int p = f; p < tabela.Count; p++)
             {
-                Doencas.Items.Add(item);
+                Pragas.Items.Add(tabela[p]);
             }
-
-
-            /* Fontes.Items.Add("NOME2");
-            Fontes.Items.Add("NOME3");
-            Fontes.Items.Add("NOME4");
-            Fontes.Items.Add("NOME5");*/
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,5 +76,6 @@ namespace Login
                 MessageBox.Show(teste);
             }*/
         }
+
     }
 }

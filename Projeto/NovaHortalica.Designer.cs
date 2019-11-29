@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Fontes = new System.Windows.Forms.CheckedListBox();
             this.Pragas = new System.Windows.Forms.CheckedListBox();
-            this.Doencas = new System.Windows.Forms.CheckedListBox();
+            this.DoenÇas = new System.Windows.Forms.CheckedListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +52,9 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Doencas = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbn_nome
@@ -76,26 +79,26 @@
             // Fontes
             // 
             this.Fontes.FormattingEnabled = true;
-            this.Fontes.Location = new System.Drawing.Point(261, 18);
+            this.Fontes.Location = new System.Drawing.Point(228, 119);
             this.Fontes.Name = "Fontes";
-            this.Fontes.Size = new System.Drawing.Size(93, 79);
+            this.Fontes.Size = new System.Drawing.Size(116, 64);
             this.Fontes.TabIndex = 2;
             // 
             // Pragas
             // 
             this.Pragas.FormattingEnabled = true;
-            this.Pragas.Location = new System.Drawing.Point(261, 112);
+            this.Pragas.Location = new System.Drawing.Point(231, 211);
             this.Pragas.Name = "Pragas";
-            this.Pragas.Size = new System.Drawing.Size(95, 79);
+            this.Pragas.Size = new System.Drawing.Size(116, 64);
             this.Pragas.TabIndex = 3;
             // 
-            // Doencas
+            // DoenÇas
             // 
-            this.Doencas.FormattingEnabled = true;
-            this.Doencas.Location = new System.Drawing.Point(261, 207);
-            this.Doencas.Name = "Doencas";
-            this.Doencas.Size = new System.Drawing.Size(95, 79);
-            this.Doencas.TabIndex = 4;
+            this.DoenÇas.FormattingEnabled = true;
+            this.DoenÇas.Location = new System.Drawing.Point(228, 27);
+            this.DoenÇas.Name = "DoenÇas";
+            this.DoenÇas.Size = new System.Drawing.Size(116, 64);
+            this.DoenÇas.TabIndex = 4;
             // 
             // textBox1
             // 
@@ -252,11 +255,41 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "Tratos culturais";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(228, 196);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Pragas";
+            // 
+            // Doencas
+            // 
+            this.Doencas.AutoSize = true;
+            this.Doencas.Location = new System.Drawing.Point(227, 11);
+            this.Doencas.Name = "Doencas";
+            this.Doencas.Size = new System.Drawing.Size(50, 13);
+            this.Doencas.TabIndex = 26;
+            this.Doencas.Text = "Doenças";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(228, 103);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Fontes";
+            // 
             // NovaHortalica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(358, 358);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Doencas);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -276,7 +309,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Doencas);
+            this.Controls.Add(this.DoenÇas);
             this.Controls.Add(this.Pragas);
             this.Controls.Add(this.Fontes);
             this.Controls.Add(this.button1);
@@ -295,7 +328,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckedListBox Fontes;
         private System.Windows.Forms.CheckedListBox Pragas;
-        private System.Windows.Forms.CheckedListBox Doencas;
+        private System.Windows.Forms.CheckedListBox DoenÇas;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
@@ -315,5 +348,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Doencas;
+        private System.Windows.Forms.Label label11;
     }
 }

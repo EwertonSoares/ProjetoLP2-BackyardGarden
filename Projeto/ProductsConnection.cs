@@ -21,6 +21,8 @@ namespace Login
         //Pegando informaçôes de uma determinada tabela de produtos
         public List<string> getProducts(string tableName)
         {
+            lista.Clear();
+                
 
             connected.pgsqlConnection = new NpgsqlConnection(connected.conn);
 
@@ -28,7 +30,7 @@ namespace Login
             {
                 //Abrindo conexão com p PgSQL e definindo etrutura SQL
                 connected.pgsqlConnection.Open();
-                select = "Select * from " + tableName + " order by id";
+                select = "Select * from " + tableName + " order by nome";
 
                 using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(select, connected.pgsqlConnection))
                 {
@@ -59,7 +61,7 @@ namespace Login
         }
 
         //Pega um registro de uma determinada tabela pelo id
-        public DataTable getProductsbyId(int id, string tableName)
+        /*public DataTable getProductsbyId(int id, string tableName)
         {
             try
             {
@@ -88,7 +90,7 @@ namespace Login
                 connected.pgsqlConnection.Close();
             }
             return dt;
-        }
+        }*/
 
 
     }
