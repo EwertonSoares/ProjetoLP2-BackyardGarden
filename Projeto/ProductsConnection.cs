@@ -52,21 +52,24 @@ namespace Login
         }
 
         //Pega um registro de uma determinada tabela pelo id
-        /*public DataTable getProductsbyId(int id, string tableName)
+        public void inserir(string tableName,string nome,string esp,string epoca,string col,string prop, string prod, string seme, string irrig, string trans,string tratos)
         {
-            try
-            {
-                using (NpgsqlConnection pgsqlConnection = new NpgsqlConnection(connected.conn))
-                {
-                    //Abra a conexão com o PgSQL
-                    connected.pgsqlConnection.Open();
-                    string cmdSelect = "Select * from " + tableName + " Where id = " + id;
 
-                    using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(cmdSelect, connected.pgsqlConnection))
-                    {
-                        Adpt.Fill(dt);
-                    }
-                }
+                connected.pgsqlConnection = new NpgsqlConnection(connected.conn);
+
+              try
+              {
+                    //Abrindo conexão com p PgSQL e definindo etrutura SQL
+                    connected.pgsqlConnection.Open();
+
+               string cmdInsert = String.Format("insert into hortalicas (nome, epoca, propagacao, semeadura_direta, transplante, espacamento, colheita, produtividade, irrigacao, tratos_culturais) " + 
+                   " VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')", nome, esp, epoca, col, prop, prod, seme, irrig, trans, tratos);
+
+
+                 using (NpgsqlCommand Adpt = new NpgsqlCommand(cmdInsert, connected.pgsqlConnection))
+                 {
+                    Adpt.ExecuteNonQuery();
+                 }
             }
             catch (NpgsqlException ex)
             {
@@ -80,8 +83,7 @@ namespace Login
             {
                 connected.pgsqlConnection.Close();
             }
-            return dt;
-        }*/
+        }
 
 
     }

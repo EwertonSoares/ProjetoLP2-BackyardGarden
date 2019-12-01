@@ -33,24 +33,24 @@
             this.ckb2 = new System.Windows.Forms.CheckedListBox();
             this.ckb3 = new System.Windows.Forms.CheckedListBox();
             this.ckb1 = new System.Windows.Forms.CheckedListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cbb1 = new System.Windows.Forms.ComboBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.epPlantio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbb3 = new System.Windows.Forms.ComboBox();
-            this.cbb4 = new System.Windows.Forms.ComboBox();
+            this.prop = new System.Windows.Forms.ComboBox();
+            this.semead = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.trans = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.espac = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbb2 = new System.Windows.Forms.ComboBox();
+            this.epColhe = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.produ = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.irrig = new System.Windows.Forms.TextBox();
+            this.tratos = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Doencas = new System.Windows.Forms.Label();
@@ -100,20 +100,20 @@
             this.ckb1.Size = new System.Drawing.Size(116, 64);
             this.ckb1.TabIndex = 4;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtNome.Location = new System.Drawing.Point(15, 25);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(90, 20);
+            this.txtNome.TabIndex = 5;
             // 
-            // cbb1
+            // epPlantio
             // 
-            this.cbb1.FormattingEnabled = true;
-            this.cbb1.Location = new System.Drawing.Point(15, 85);
-            this.cbb1.Name = "cbb1";
-            this.cbb1.Size = new System.Drawing.Size(87, 21);
-            this.cbb1.TabIndex = 6;
+            this.epPlantio.FormattingEnabled = true;
+            this.epPlantio.Location = new System.Drawing.Point(15, 85);
+            this.epPlantio.Name = "epPlantio";
+            this.epPlantio.Size = new System.Drawing.Size(87, 21);
+            this.epPlantio.TabIndex = 6;
             // 
             // label1
             // 
@@ -133,21 +133,21 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Propagaçao";
             // 
-            // cbb3
+            // prop
             // 
-            this.cbb3.FormattingEnabled = true;
-            this.cbb3.Location = new System.Drawing.Point(15, 148);
-            this.cbb3.Name = "cbb3";
-            this.cbb3.Size = new System.Drawing.Size(87, 21);
-            this.cbb3.TabIndex = 9;
+            this.prop.FormattingEnabled = true;
+            this.prop.Location = new System.Drawing.Point(15, 148);
+            this.prop.Name = "prop";
+            this.prop.Size = new System.Drawing.Size(87, 21);
+            this.prop.TabIndex = 9;
             // 
-            // cbb4
+            // semead
             // 
-            this.cbb4.FormattingEnabled = true;
-            this.cbb4.Location = new System.Drawing.Point(15, 211);
-            this.cbb4.Name = "cbb4";
-            this.cbb4.Size = new System.Drawing.Size(87, 21);
-            this.cbb4.TabIndex = 10;
+            this.semead.FormattingEnabled = true;
+            this.semead.Location = new System.Drawing.Point(15, 211);
+            this.semead.Name = "semead";
+            this.semead.Size = new System.Drawing.Size(87, 21);
+            this.semead.TabIndex = 10;
             // 
             // label3
             // 
@@ -158,12 +158,12 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Semeadura Direta";
             // 
-            // textBox2
+            // trans
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 266);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 20);
-            this.textBox2.TabIndex = 12;
+            this.trans.Location = new System.Drawing.Point(15, 266);
+            this.trans.Name = "trans";
+            this.trans.Size = new System.Drawing.Size(90, 20);
+            this.trans.TabIndex = 12;
             // 
             // label4
             // 
@@ -174,12 +174,12 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Transplante";
             // 
-            // textBox3
+            // espac
             // 
-            this.textBox3.Location = new System.Drawing.Point(129, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 20);
-            this.textBox3.TabIndex = 14;
+            this.espac.Location = new System.Drawing.Point(129, 25);
+            this.espac.Name = "espac";
+            this.espac.Size = new System.Drawing.Size(90, 20);
+            this.espac.TabIndex = 14;
             // 
             // label5
             // 
@@ -190,13 +190,13 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Espaçamento";
             // 
-            // cbb2
+            // epColhe
             // 
-            this.cbb2.FormattingEnabled = true;
-            this.cbb2.Location = new System.Drawing.Point(132, 85);
-            this.cbb2.Name = "cbb2";
-            this.cbb2.Size = new System.Drawing.Size(87, 21);
-            this.cbb2.TabIndex = 16;
+            this.epColhe.FormattingEnabled = true;
+            this.epColhe.Location = new System.Drawing.Point(132, 85);
+            this.epColhe.Name = "epColhe";
+            this.epColhe.Size = new System.Drawing.Size(87, 21);
+            this.epColhe.TabIndex = 16;
             // 
             // label6
             // 
@@ -216,12 +216,12 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Produtividade";
             // 
-            // textBox4
+            // produ
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 148);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(90, 20);
-            this.textBox4.TabIndex = 20;
+            this.produ.Location = new System.Drawing.Point(132, 148);
+            this.produ.Name = "produ";
+            this.produ.Size = new System.Drawing.Size(90, 20);
+            this.produ.TabIndex = 20;
             // 
             // label8
             // 
@@ -232,19 +232,19 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Irrigaçâo";
             // 
-            // textBox5
+            // irrig
             // 
-            this.textBox5.Location = new System.Drawing.Point(132, 212);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(90, 20);
-            this.textBox5.TabIndex = 22;
+            this.irrig.Location = new System.Drawing.Point(132, 212);
+            this.irrig.Name = "irrig";
+            this.irrig.Size = new System.Drawing.Size(90, 20);
+            this.irrig.TabIndex = 22;
             // 
-            // textBox6
+            // tratos
             // 
-            this.textBox6.Location = new System.Drawing.Point(132, 266);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(90, 20);
-            this.textBox6.TabIndex = 23;
+            this.tratos.Location = new System.Drawing.Point(132, 266);
+            this.tratos.Name = "tratos";
+            this.tratos.Size = new System.Drawing.Size(90, 20);
+            this.tratos.TabIndex = 23;
             // 
             // label9
             // 
@@ -291,24 +291,24 @@
             this.Controls.Add(this.Doencas);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tratos);
+            this.Controls.Add(this.irrig);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.produ);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbb2);
+            this.Controls.Add(this.epColhe);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.espac);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.trans);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbb4);
-            this.Controls.Add(this.cbb3);
+            this.Controls.Add(this.semead);
+            this.Controls.Add(this.prop);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbb1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.epPlantio);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.ckb1);
             this.Controls.Add(this.ckb3);
             this.Controls.Add(this.ckb2);
@@ -329,24 +329,24 @@
         private System.Windows.Forms.CheckedListBox ckb2;
         private System.Windows.Forms.CheckedListBox ckb3;
         private System.Windows.Forms.CheckedListBox ckb1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cbb1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.ComboBox epPlantio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbb3;
-        private System.Windows.Forms.ComboBox cbb4;
+        private System.Windows.Forms.ComboBox prop;
+        private System.Windows.Forms.ComboBox semead;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox trans;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox espac;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbb2;
+        private System.Windows.Forms.ComboBox epColhe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox produ;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox irrig;
+        private System.Windows.Forms.TextBox tratos;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label Doencas;
