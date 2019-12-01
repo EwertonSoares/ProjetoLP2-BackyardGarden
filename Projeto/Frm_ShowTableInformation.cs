@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class Frm_ShowAdmInformation : Form
+    public partial class Frm_ShowTableInformation : Form
     {
         AdminAccess db = new AdminAccess();
         NovoRelatorio novoRel = new NovoRelatorio();
 
         string tableName;
-        public Frm_ShowAdmInformation(string table)
+        public Frm_ShowTableInformation(string table)
         {
             InitializeComponent();
             this.tableName = table;
@@ -39,7 +39,8 @@ namespace Login
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            db.saveInformation();         
+            db.saveInformation();
+            MessageBox.Show("salvo com sucesso");
         }
 
         private void btn_Test_Click(object sender, EventArgs e)

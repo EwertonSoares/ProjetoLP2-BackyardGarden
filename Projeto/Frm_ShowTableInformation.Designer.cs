@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class Frm_ShowAdmInformation
+    partial class Frm_ShowTableInformation
     {
         /// <summary>
         /// Required designer variable.

@@ -18,7 +18,14 @@ namespace Login
 
 static int num = 0;
 static string tableName;
-public showProducts(string name)
+
+        DataTable dt = new DataTable();
+        List<string> lista = new List<string>();
+
+
+
+
+ public showProducts(string name)
 {
     tableName = name;
     InitializeComponent();
@@ -26,7 +33,15 @@ public showProducts(string name)
 
 private void showProducts_Load(object sender, EventArgs e)
 {
-    var lista = db.getProducts(tableName);
+
+
+    dt = db.getProducts(tableName);
+
+    for (int i = 0; i < dt.Rows.Count; i++)
+    {
+        string nome = (string)dt.Rows[i]["Nome"];
+        lista.Add(nome);
+    }
 
     for (int i = 0; i < lista.Count; i++)
     {

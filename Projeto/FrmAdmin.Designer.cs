@@ -30,11 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.rdb_Adm = new System.Windows.Forms.RadioButton();
-            this.rdb_fert = new System.Windows.Forms.RadioButton();
             this.rdb_frut = new System.Windows.Forms.RadioButton();
             this.rdb_hort = new System.Windows.Forms.RadioButton();
-            this.rdb_pest = new System.Windows.Forms.RadioButton();
+            this.rdb_prag = new System.Windows.Forms.RadioButton();
             this.btn_entarAdmin = new System.Windows.Forms.Button();
+            this.rdb_doen = new System.Windows.Forms.RadioButton();
+            this.rdb_font = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@
             // 
             this.rdb_Adm.AutoSize = true;
             this.rdb_Adm.Checked = true;
-            this.rdb_Adm.Location = new System.Drawing.Point(30, 46);
+            this.rdb_Adm.Location = new System.Drawing.Point(57, 56);
             this.rdb_Adm.Name = "rdb_Adm";
             this.rdb_Adm.Size = new System.Drawing.Size(99, 17);
             this.rdb_Adm.TabIndex = 6;
@@ -58,45 +59,35 @@
             this.rdb_Adm.Text = "Administradores";
             this.rdb_Adm.UseVisualStyleBackColor = true;
             // 
-            // rdb_fert
-            // 
-            this.rdb_fert.AutoSize = true;
-            this.rdb_fert.Location = new System.Drawing.Point(30, 80);
-            this.rdb_fert.Name = "rdb_fert";
-            this.rdb_fert.Size = new System.Drawing.Size(80, 17);
-            this.rdb_fert.TabIndex = 7;
-            this.rdb_fert.Text = "Fertilizantes";
-            this.rdb_fert.UseVisualStyleBackColor = true;
-            // 
             // rdb_frut
             // 
             this.rdb_frut.AutoSize = true;
-            this.rdb_frut.Location = new System.Drawing.Point(30, 116);
+            this.rdb_frut.Location = new System.Drawing.Point(57, 105);
             this.rdb_frut.Name = "rdb_frut";
-            this.rdb_frut.Size = new System.Drawing.Size(70, 17);
+            this.rdb_frut.Size = new System.Drawing.Size(68, 17);
             this.rdb_frut.TabIndex = 8;
-            this.rdb_frut.Text = "Fruticolas";
+            this.rdb_frut.Text = "Frutiferas";
             this.rdb_frut.UseVisualStyleBackColor = true;
             // 
             // rdb_hort
             // 
             this.rdb_hort.AutoSize = true;
-            this.rdb_hort.Location = new System.Drawing.Point(30, 152);
+            this.rdb_hort.Location = new System.Drawing.Point(57, 152);
             this.rdb_hort.Name = "rdb_hort";
-            this.rdb_hort.Size = new System.Drawing.Size(78, 17);
+            this.rdb_hort.Size = new System.Drawing.Size(72, 17);
             this.rdb_hort.TabIndex = 9;
-            this.rdb_hort.Text = "Horataliças";
+            this.rdb_hort.Text = "Hortaliças";
             this.rdb_hort.UseVisualStyleBackColor = true;
             // 
-            // rdb_pest
+            // rdb_prag
             // 
-            this.rdb_pest.AutoSize = true;
-            this.rdb_pest.Location = new System.Drawing.Point(30, 190);
-            this.rdb_pest.Name = "rdb_pest";
-            this.rdb_pest.Size = new System.Drawing.Size(73, 17);
-            this.rdb_pest.TabIndex = 10;
-            this.rdb_pest.Text = "Pesticidas";
-            this.rdb_pest.UseVisualStyleBackColor = true;
+            this.rdb_prag.AutoSize = true;
+            this.rdb_prag.Location = new System.Drawing.Point(235, 56);
+            this.rdb_prag.Name = "rdb_prag";
+            this.rdb_prag.Size = new System.Drawing.Size(58, 17);
+            this.rdb_prag.TabIndex = 10;
+            this.rdb_prag.Text = "Pragas";
+            this.rdb_prag.UseVisualStyleBackColor = true;
             // 
             // btn_entarAdmin
             // 
@@ -108,17 +99,38 @@
             this.btn_entarAdmin.UseVisualStyleBackColor = true;
             this.btn_entarAdmin.Click += new System.EventHandler(this.btn_entarAdmin_Click);
             // 
+            // rdb_doen
+            // 
+            this.rdb_doen.AutoSize = true;
+            this.rdb_doen.Location = new System.Drawing.Point(235, 105);
+            this.rdb_doen.Name = "rdb_doen";
+            this.rdb_doen.Size = new System.Drawing.Size(68, 17);
+            this.rdb_doen.TabIndex = 12;
+            this.rdb_doen.Text = "Doenças";
+            this.rdb_doen.UseVisualStyleBackColor = true;
+            // 
+            // rdb_font
+            // 
+            this.rdb_font.AutoSize = true;
+            this.rdb_font.Location = new System.Drawing.Point(236, 152);
+            this.rdb_font.Name = "rdb_font";
+            this.rdb_font.Size = new System.Drawing.Size(57, 17);
+            this.rdb_font.TabIndex = 13;
+            this.rdb_font.Text = "Fontes";
+            this.rdb_font.UseVisualStyleBackColor = true;
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(354, 281);
+            this.Controls.Add(this.rdb_font);
+            this.Controls.Add(this.rdb_doen);
             this.Controls.Add(this.btn_entarAdmin);
-            this.Controls.Add(this.rdb_pest);
+            this.Controls.Add(this.rdb_prag);
             this.Controls.Add(this.rdb_hort);
             this.Controls.Add(this.rdb_frut);
-            this.Controls.Add(this.rdb_fert);
             this.Controls.Add(this.rdb_Adm);
             this.Controls.Add(this.label1);
             this.Name = "FrmAdmin";
@@ -131,10 +143,11 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rdb_Adm;
-        private System.Windows.Forms.RadioButton rdb_fert;
         private System.Windows.Forms.RadioButton rdb_frut;
         private System.Windows.Forms.RadioButton rdb_hort;
-        private System.Windows.Forms.RadioButton rdb_pest;
+        private System.Windows.Forms.RadioButton rdb_prag;
         private System.Windows.Forms.Button btn_entarAdmin;
+        private System.Windows.Forms.RadioButton rdb_doen;
+        private System.Windows.Forms.RadioButton rdb_font;
     }
 }
