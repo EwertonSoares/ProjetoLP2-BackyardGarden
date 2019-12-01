@@ -33,7 +33,7 @@ public partial class NovaHortalica : Form
 
     //List<string> tabela = new List<string>();
     List<string> listaNomes = new List<string>();
-    List<string> listaEpoca = new List<string>();
+    List<string> lista = new List<string>();
 
 
     ProductsConnection conn = new ProductsConnection();
@@ -53,41 +53,71 @@ public partial class NovaHortalica : Form
             dt = conn.getProducts("DOENCAS");
             listaNomes = getNomes(dt, nomes);
 
-        for (d = 0; d < listaNomes.Count; d++)
-         {
-              ckb1.Items.Add(listaNomes[d]);
-         }
+            for (d = 0; d < listaNomes.Count; d++)
+             {
+                  ckb1.Items.Add(listaNomes[d]);
+             }
 
-        //Preenchendo segundo checkbox
-        dt = conn.getProducts("FONTES");
-        listaNomes = getNomes(dt, nomes);
+            //Preenchendo segundo checkbox
+            dt = conn.getProducts("FONTES");
+            listaNomes = getNomes(dt, nomes);
 
-        for (f = d; f < listaNomes.Count; f++)
-         {
-             ckb2.Items.Add(listaNomes[f]);
-         }
+            for (f = d; f < listaNomes.Count; f++)
+             {
+                 ckb2.Items.Add(listaNomes[f]);
+             }
 
-        //Preenchendo terceiro checkbox
-        dt = conn.getProducts("PRAGAS");
-        listaNomes = getNomes(dt, nomes);
+            //Preenchendo terceiro checkbox
+            dt = conn.getProducts("PRAGAS");
+            listaNomes = getNomes(dt, nomes);
 
-        for (int p = f; p < listaNomes.Count; p++)
-          {
-             ckb3.Items.Add(listaNomes[p]);
-          }
+            for (int p = f; p < listaNomes.Count; p++)
+              {
+                 ckb3.Items.Add(listaNomes[p]);
+              }
 
+                dt.Clear();
 
-            //Preenchendo combobox epoca do plantio
              dt = conn.getProducts("HORTALICAS");
-             listaEpoca = getNomes(dt, atributo[0]);
+
+
+            lista = getNomes(dt, atributo[0]);
          
-            for (ep = 0; ep < listaEpoca.Count; ep++)
+            for (ep = 0; ep < lista.Count; ep++)
             {
-                //ckb1.Items.Add(listaNomes[d]);
-                cbb1.Items.Add(listaEpoca[ep]);
+                cbb1.Items.Add(lista[ep]);
 
             }
-            
+
+
+            lista.Clear();
+
+            lista = getNomes(dt, atributo[1]);
+
+            for (ep = 0; ep < lista.Count; ep++)
+            {
+                cbb2.Items.Add(lista[ep]);
+
+            }
+
+
+            lista.Clear();
+
+            lista = getNomes(dt, atributo[2]);
+
+            for (ep = 0; ep < lista.Count; ep++)
+            {
+                cbb3.Items.Add(lista[ep]);
+
+            }
+
+
+            cbb4.Items.Add("SIM");
+            cbb4.Items.Add("NÂO");
+
+
+
+
 
         }
 
