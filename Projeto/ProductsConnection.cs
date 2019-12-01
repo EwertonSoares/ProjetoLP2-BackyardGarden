@@ -15,32 +15,23 @@ namespace Login
         Connection connected = new Connection();
 
         List<string> lista = new List<string>();
+
         DataTable dt = new DataTable();
 
-
         //Pegando informaçôes de uma determinada tabela de produtos
-        public List<string> getProducts(string tableName)
+        public DataTable getProducts(string tableName)
         {
-            lista.Clear();
-                
-
             connected.pgsqlConnection = new NpgsqlConnection(connected.conn);
 
             try
-            {
-                //Abrindo conexão com p PgSQL e definindo etrutura SQL
+            {   //Abrindo conexão com p PgSQL e definindo etrutura SQL
                 connected.pgsqlConnection.Open();
+
                 select = "Select * from " + tableName + " order by nome";
 
                 using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(select, connected.pgsqlConnection))
                 {
                     Adpt.Fill(dt);
-
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        string nome = (string)dt.Rows[i]["Nome"];
-                        lista.Add(nome);
-                    }
                 }
             }
             catch (NpgsqlException ex)
@@ -57,7 +48,7 @@ namespace Login
                 connected.pgsqlConnection.Close();
             }
 
-            return lista;
+            return dt;
         }
 
         //Pega um registro de uma determinada tabela pelo id

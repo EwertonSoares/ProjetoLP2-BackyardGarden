@@ -30,11 +30,11 @@
         {
             this.lbn_nome = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.Fontes = new System.Windows.Forms.CheckedListBox();
-            this.Pragas = new System.Windows.Forms.CheckedListBox();
-            this.DoenÇas = new System.Windows.Forms.CheckedListBox();
+            this.ckb2 = new System.Windows.Forms.CheckedListBox();
+            this.ckb3 = new System.Windows.Forms.CheckedListBox();
+            this.ckb1 = new System.Windows.Forms.CheckedListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbb1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -76,29 +76,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Fontes
+            // ckb2
             // 
-            this.Fontes.FormattingEnabled = true;
-            this.Fontes.Location = new System.Drawing.Point(228, 119);
-            this.Fontes.Name = "Fontes";
-            this.Fontes.Size = new System.Drawing.Size(116, 64);
-            this.Fontes.TabIndex = 2;
+            this.ckb2.FormattingEnabled = true;
+            this.ckb2.Location = new System.Drawing.Point(228, 119);
+            this.ckb2.Name = "ckb2";
+            this.ckb2.Size = new System.Drawing.Size(116, 64);
+            this.ckb2.TabIndex = 2;
             // 
-            // Pragas
+            // ckb3
             // 
-            this.Pragas.FormattingEnabled = true;
-            this.Pragas.Location = new System.Drawing.Point(231, 211);
-            this.Pragas.Name = "Pragas";
-            this.Pragas.Size = new System.Drawing.Size(116, 64);
-            this.Pragas.TabIndex = 3;
+            this.ckb3.FormattingEnabled = true;
+            this.ckb3.Location = new System.Drawing.Point(231, 211);
+            this.ckb3.Name = "ckb3";
+            this.ckb3.Size = new System.Drawing.Size(116, 64);
+            this.ckb3.TabIndex = 3;
             // 
-            // DoenÇas
+            // ckb1
             // 
-            this.DoenÇas.FormattingEnabled = true;
-            this.DoenÇas.Location = new System.Drawing.Point(228, 27);
-            this.DoenÇas.Name = "DoenÇas";
-            this.DoenÇas.Size = new System.Drawing.Size(116, 64);
-            this.DoenÇas.TabIndex = 4;
+            this.ckb1.FormattingEnabled = true;
+            this.ckb1.Location = new System.Drawing.Point(228, 27);
+            this.ckb1.Name = "ckb1";
+            this.ckb1.Size = new System.Drawing.Size(116, 64);
+            this.ckb1.TabIndex = 4;
             // 
             // textBox1
             // 
@@ -107,13 +107,13 @@
             this.textBox1.Size = new System.Drawing.Size(90, 20);
             this.textBox1.TabIndex = 5;
             // 
-            // comboBox1
+            // cbb1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(87, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cbb1.FormattingEnabled = true;
+            this.cbb1.Location = new System.Drawing.Point(15, 85);
+            this.cbb1.Name = "cbb1";
+            this.cbb1.Size = new System.Drawing.Size(87, 21);
+            this.cbb1.TabIndex = 6;
             // 
             // label1
             // 
@@ -307,11 +307,11 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbb1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.DoenÇas);
-            this.Controls.Add(this.Pragas);
-            this.Controls.Add(this.Fontes);
+            this.Controls.Add(this.ckb1);
+            this.Controls.Add(this.ckb3);
+            this.Controls.Add(this.ckb2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbn_nome);
             this.Name = "NovaHortalica";
@@ -326,11 +326,11 @@
 
         private System.Windows.Forms.Label lbn_nome;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckedListBox Fontes;
-        private System.Windows.Forms.CheckedListBox Pragas;
-        private System.Windows.Forms.CheckedListBox DoenÇas;
+        private System.Windows.Forms.CheckedListBox ckb2;
+        private System.Windows.Forms.CheckedListBox ckb3;
+        private System.Windows.Forms.CheckedListBox ckb1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbb1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;
