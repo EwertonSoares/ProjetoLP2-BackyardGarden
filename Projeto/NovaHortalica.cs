@@ -19,33 +19,32 @@ public partial class NovaHortalica : Form
 
     public List<string> getNomes(DataTable dt, string col)
     {
-        List<string> nomes = new List<string>();
+            List<string> valores = new List<string>();
 
+            for (int i = 0; i < dt.Rows.Count; i++)
+             {
+                string valor = (string)dt.Rows[i][col];
+                valores.Add(valor);
+             }
 
-        for (int i = 0; i < dt.Rows.Count; i++)
-        {
-            string nome = (string)dt.Rows[i][col];
-            nomes.Add(nome);
-        }
-
-        return nomes;
+            return valores;
     }
 
     //List<string> tabela = new List<string>();
-    List<string> listaNomes = new List<string>();
-    List<string> lista = new List<string>();
+        List<string> listaNomes = new List<string>();
+        List<string> lista = new List<string>();
+
+        ProductsConnection conn = new ProductsConnection();
+        DataTable dt = new DataTable();
 
 
-    ProductsConnection conn = new ProductsConnection();
-    DataTable dt = new DataTable();
-
-    private void AdicionandoProduto_Load(object sender, EventArgs e)
-    {
+        private void AdicionandoProduto_Load(object sender, EventArgs e)
+        {
             int d;
-            int ep;
+            int atr;
             int f = 0;
 
-            string[] atributo = {"epoca", "colheita","propagacao", "produtividade", "semeadura_direta"};
+            string[] atributo = {"epoca", "colheita"};
 
             string nomes = "Nome";
 
@@ -76,16 +75,18 @@ public partial class NovaHortalica : Form
                  ckb3.Items.Add(listaNomes[p]);
               }
 
-                dt.Clear();
+
+            dt.Clear();
+
 
              dt = conn.getProducts("HORTALICAS");
 
 
             lista = getNomes(dt, atributo[0]);
          
-            for (ep = 0; ep < lista.Count; ep++)
+            for (atr = 0; atr < lista.Count; atr++)
             {
-                cbb1.Items.Add(lista[ep]);
+                epPlantio.Items.Add(lista[atr]);
 
             }
 
@@ -94,30 +95,28 @@ public partial class NovaHortalica : Form
 
             lista = getNomes(dt, atributo[1]);
 
-            for (ep = 0; ep < lista.Count; ep++)
+            for (atr = 0; atr < lista.Count; atr++)
             {
-                cbb2.Items.Add(lista[ep]);
+                epColhe.Items.Add(lista[atr]);
 
             }
 
 
-            lista.Clear();
-
+            /*lista.Clear();
+            
             lista = getNomes(dt, atributo[2]);
 
-            for (ep = 0; ep < lista.Count; ep++)
+            for (atr = 0; atr < lista.Count; atr++)
             {
-                cbb3.Items.Add(lista[ep]);
+                cbb3.Items.Add(lista[atr]);
 
-            }
+            }*/
 
+            prop.Items.Add("SEMENTES");
+            prop.Items.Add("RAIZ");
 
-            cbb4.Items.Add("SIM");
-            cbb4.Items.Add("NÂO");
-
-
-
-
+            semead.Items.Add("SIM");
+            semead.Items.Add("NÂO");
 
         }
 
@@ -131,7 +130,12 @@ public partial class NovaHortalica : Form
 
         }
 
-        MessageBox.Show("iuvlv");
+
+   conn.inserir("HORTALICAS", txtNome.Text, espac.Text, epPlantio.Text, epColhe.Text, prop.Text, produ.Text, semead.Text, irrig.Text, trans.Text, tratos.Text);
+
+
+
+            MessageBox.Show("iuvlv");
 
 
         /*if (teste != string.Empty)
@@ -140,5 +144,5 @@ public partial class NovaHortalica : Form
         }*/
     }
 
-}
+    }
 }
