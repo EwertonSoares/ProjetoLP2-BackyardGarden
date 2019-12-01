@@ -37,14 +37,14 @@
             this.cbb1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbb3 = new System.Windows.Forms.ComboBox();
+            this.cbb4 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbb2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -133,21 +133,21 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Propagaçao";
             // 
-            // comboBox2
+            // cbb3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(15, 148);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(87, 21);
-            this.comboBox2.TabIndex = 9;
+            this.cbb3.FormattingEnabled = true;
+            this.cbb3.Location = new System.Drawing.Point(15, 148);
+            this.cbb3.Name = "cbb3";
+            this.cbb3.Size = new System.Drawing.Size(87, 21);
+            this.cbb3.TabIndex = 9;
             // 
-            // comboBox3
+            // cbb4
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(15, 211);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(87, 21);
-            this.comboBox3.TabIndex = 10;
+            this.cbb4.FormattingEnabled = true;
+            this.cbb4.Location = new System.Drawing.Point(15, 211);
+            this.cbb4.Name = "cbb4";
+            this.cbb4.Size = new System.Drawing.Size(87, 21);
+            this.cbb4.TabIndex = 10;
             // 
             // label3
             // 
@@ -190,13 +190,13 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Espaçamento";
             // 
-            // comboBox4
+            // cbb2
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(132, 85);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(87, 21);
-            this.comboBox4.TabIndex = 16;
+            this.cbb2.FormattingEnabled = true;
+            this.cbb2.Location = new System.Drawing.Point(132, 85);
+            this.cbb2.Name = "cbb2";
+            this.cbb2.Size = new System.Drawing.Size(87, 21);
+            this.cbb2.TabIndex = 16;
             // 
             // label6
             // 
@@ -297,14 +297,14 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.cbb2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbb4);
+            this.Controls.Add(this.cbb3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbb1);
@@ -333,14 +333,14 @@
         private System.Windows.Forms.ComboBox cbb1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbb3;
+        private System.Windows.Forms.ComboBox cbb4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbb2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
