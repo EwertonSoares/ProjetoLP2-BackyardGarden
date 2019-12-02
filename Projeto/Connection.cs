@@ -13,8 +13,8 @@ namespace Login
         public string server = "127.0.0.1";
         public string port = "5432";
         public string userName = "postgres";
-        public string password = "1234";
-        public string dbName = "BackyardGarden";
+        public string password = "bruno2108";
+        public string dbName = "newBd";
 
         public NpgsqlConnection pgsqlConnection = null;
 

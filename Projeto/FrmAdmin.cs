@@ -28,16 +28,34 @@ namespace Login
             }
             if(rdb_frut.Checked == true)
             {
-                //table = "pragas";
-                /*NovaHortalica nova = new NovaHortalica("DOENÇAS", "FONTES", "PRAGAS");
-                nova.ShowDialog();*/
+                FrmCulturas nova = new FrmCulturas("FRUTIFERAS");
+                nova.ShowDialog();
             }
             if(rdb_hort.Checked == true)
             {
                 //table = "hortalicas";
-                NovaHortalica nova = new NovaHortalica();
+                FrmCulturas nova = new FrmCulturas("HORTALICAS");
                 nova.ShowDialog();
             }
+
+            if (rdb_font.Checked == true)
+            {
+                FrmPDF pdf = new FrmPDF("FONTES");
+                pdf.ShowDialog();
+            }
+
+            if (rdb_prag.Checked == true)
+            {
+                FrmPDF pdf = new FrmPDF("PRAGAS");
+                pdf.ShowDialog();
+            }
+
+            if (rdb_doen.Checked == true)
+            {
+                FrmPDF pdf = new FrmPDF("DOENCAS");
+                pdf.ShowDialog();
+            }
+
   
         }
 

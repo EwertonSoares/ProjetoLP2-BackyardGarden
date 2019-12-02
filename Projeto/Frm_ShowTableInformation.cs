@@ -25,7 +25,7 @@ namespace Login
         private void Frm_ShowAdm_Load(object sender, EventArgs e)
         {
             ViewAll.DataSource = db.getTableInformation(tableName);
-            ViewAll.Columns["id"].ReadOnly = true;
+            ViewAll.Columns["id_usuario"].ReadOnly = true;
 
         }
 

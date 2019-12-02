@@ -55,7 +55,7 @@
             this.btnHort.Name = "btnHort";
             this.btnHort.Size = new System.Drawing.Size(330, 58);
             this.btnHort.TabIndex = 2;
-            this.btnHort.Text = "HORTALÇAS";
+            this.btnHort.Text = "HORTALIÇAS";
             this.btnHort.UseVisualStyleBackColor = true;
             this.btnHort.Click += new System.EventHandler(this.btnHort_Click);
             // 
@@ -79,11 +79,11 @@
             this.btn_Frt.Name = "btn_Frt";
             this.btn_Frt.Size = new System.Drawing.Size(330, 58);
             this.btn_Frt.TabIndex = 4;
-            this.btn_Frt.Text = "FRUTICOLAS";
+            this.btn_Frt.Text = "FRUTIFERAS";
             this.btn_Frt.UseVisualStyleBackColor = true;
             this.btn_Frt.Click += new System.EventHandler(this.btn_Frt_Click);
             // 
-            // FrmPaginaInicial
+            // FrmSegundaPagina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +92,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnHort);
             this.Controls.Add(this.btnLogout);
-            this.Name = "FrmPaginaInicial";
+            this.Name = "FrmSegundaPagina";
             this.Text = "Página principal";
             this.ResumeLayout(false);
 

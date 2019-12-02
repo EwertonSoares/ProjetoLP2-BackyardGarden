@@ -61,7 +61,7 @@
             this.Controls.Add(this.btn_newlist);
             this.Controls.Add(this.btn_mylist);
             this.Name = "FrmInicial";
-            this.Text = "FrmInicial";
+            this.Text = "Página Inicial";
             this.ResumeLayout(false);
 
         }

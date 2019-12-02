@@ -101,17 +101,6 @@ public partial class NovaHortalica : Form
 
             }
 
-
-            /*lista.Clear();
-            
-            lista = getNomes(dt, atributo[2]);
-
-            for (atr = 0; atr < lista.Count; atr++)
-            {
-                cbb3.Items.Add(lista[atr]);
-
-            }*/
-
             prop.Items.Add("SEMENTES");
             prop.Items.Add("RAIZ");
 
@@ -136,12 +125,6 @@ public partial class NovaHortalica : Form
 
 
             MessageBox.Show("iuvlv");
-
-
-        /*if (teste != string.Empty)
-        {
-            MessageBox.Show(teste);
-        }*/
     }
 
     }

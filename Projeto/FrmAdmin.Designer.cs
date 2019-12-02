@@ -49,6 +49,9 @@
             // 
             // rdb_Adm
             // 
+            this.rdb_Adm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_Adm.AutoSize = true;
             this.rdb_Adm.Checked = true;
             this.rdb_Adm.Location = new System.Drawing.Point(57, 56);
@@ -61,6 +64,9 @@
             // 
             // rdb_frut
             // 
+            this.rdb_frut.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_frut.AutoSize = true;
             this.rdb_frut.Location = new System.Drawing.Point(57, 105);
             this.rdb_frut.Name = "rdb_frut";
@@ -71,6 +77,9 @@
             // 
             // rdb_hort
             // 
+            this.rdb_hort.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_hort.AutoSize = true;
             this.rdb_hort.Location = new System.Drawing.Point(57, 152);
             this.rdb_hort.Name = "rdb_hort";
@@ -81,6 +90,9 @@
             // 
             // rdb_prag
             // 
+            this.rdb_prag.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_prag.AutoSize = true;
             this.rdb_prag.Location = new System.Drawing.Point(235, 56);
             this.rdb_prag.Name = "rdb_prag";
@@ -101,6 +113,9 @@
             // 
             // rdb_doen
             // 
+            this.rdb_doen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_doen.AutoSize = true;
             this.rdb_doen.Location = new System.Drawing.Point(235, 105);
             this.rdb_doen.Name = "rdb_doen";
@@ -111,6 +126,9 @@
             // 
             // rdb_font
             // 
+            this.rdb_font.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_font.AutoSize = true;
             this.rdb_font.Location = new System.Drawing.Point(236, 152);
             this.rdb_font.Name = "rdb_font";
