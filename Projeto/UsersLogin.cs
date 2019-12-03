@@ -22,11 +22,11 @@ namespace Login
 
             try
             {
-                select = "SELECT COUNT(ID) FROM usuarios WHERE email = @email AND password = @password AND tipo = @tipo";
+                select = "SELECT COUNT(ID_USUARIO) FROM usuarios WHERE email = @email AND senha = @senha AND tipo = @tipo";
 
                 NpgsqlCommand cmd = new NpgsqlCommand(select, connected.pgsqlConnection);
                 cmd.Parameters.Add("@email", NpgsqlDbType.Varchar).Value = email;
-                cmd.Parameters.Add("@password", NpgsqlDbType.Varchar).Value = pwd;
+                cmd.Parameters.Add("@senha", NpgsqlDbType.Varchar).Value = pwd;
                 cmd.Parameters.Add("@tipo", NpgsqlDbType.Varchar).Value = tipo;
 
                 //Abrindo conexão com p PgSQL e definindo etrutura SQL

@@ -27,7 +27,7 @@ namespace Login
                 doc.SetMargins(40, 40, 40, 80);
                 doc.AddCreationDate();
                 //Caminho e nome do arquvo
-                caminho = @"C:\Users\EWERTON\Downloads\" + nome +".pdf";
+                caminho = @"C:\Users\bruno\Downloads\" + nome +".pdf";
 
                 //Aqui se estancia o arquivo que se deseja gerar
                 PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));

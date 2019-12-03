@@ -26,16 +26,15 @@ namespace Login
 
         private void fmrEditarPerfil_Load(object sender, EventArgs e)
         {
-            string connection = @"Host=127.0.0.1,Username=localhost,,Password=bruno2108,Database=newBd";
+            string connection = @"Host=127.0.0.1,Username=postgres,Password=bruno2108,Database=newBd";
 
-            string select = @"SELECT * FROM usuarios";
+            string select = "SELECT * FROM usuarios";
 
             string update = @"UPDATE usuarios SET " +
                 "nome=@nome" +
                 "sobrenome=@sobrenome" +
                 "email=@email" +
-                "senha=@senha" +
-                "tipo=@tipo";
+                "senha=@senha";
 
             string delete = @"DELETE FROM usuarios WHERE email=@email";
 

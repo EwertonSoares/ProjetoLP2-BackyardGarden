@@ -39,14 +39,14 @@
             this.PDFGred.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PDFGred.Location = new System.Drawing.Point(12, 27);
             this.PDFGred.Name = "PDFGred";
-            this.PDFGred.Size = new System.Drawing.Size(267, 282);
+            this.PDFGred.Size = new System.Drawing.Size(293, 282);
             this.PDFGred.TabIndex = 0;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(330, 110);
+            this.buttonSave.Location = new System.Drawing.Point(347, 107);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(105, 23);
+            this.buttonSave.Size = new System.Drawing.Size(105, 43);
             this.buttonSave.TabIndex = 1;
             this.buttonSave.Text = "Salvar";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -54,9 +54,9 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(330, 173);
+            this.buttonDel.Location = new System.Drawing.Point(347, 170);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(105, 23);
+            this.buttonDel.Size = new System.Drawing.Size(105, 43);
             this.buttonDel.TabIndex = 2;
             this.buttonDel.Text = "Delete";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 340);
+            this.ClientSize = new System.Drawing.Size(518, 344);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.PDFGred);

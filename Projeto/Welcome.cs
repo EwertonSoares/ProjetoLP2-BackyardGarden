@@ -22,5 +22,10 @@ namespace Login
             FrmLogin login = new FrmLogin();
             login.ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

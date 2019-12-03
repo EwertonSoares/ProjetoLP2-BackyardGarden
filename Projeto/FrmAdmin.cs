@@ -59,5 +59,9 @@ namespace Login
   
         }
 
+        private void FrmAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
