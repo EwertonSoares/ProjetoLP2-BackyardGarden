@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class fru : Form
+    public partial class FrmUpPass : Form
     {
-        public fru()
+        public FrmUpPass()
         {
             InitializeComponent();
-        }
-
-        private void Fontes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fru_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

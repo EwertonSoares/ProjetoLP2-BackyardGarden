@@ -39,9 +39,9 @@
             this.rdb_user = new System.Windows.Forms.RadioButton();
             this.rdb_Adm = new System.Windows.Forms.RadioButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.pictureLogo = new System.Windows.Forms.PictureBox();
+            this.labelName = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(52, 63);
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
+            this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(126, 20);
             this.textBox2.TabIndex = 2;
             // 
@@ -139,22 +139,9 @@
             this.rdb_Adm.Text = "Administrador";
             this.rdb_Adm.UseVisualStyleBackColor = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic Light", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(121, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(281, 48);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Horta no Quintal";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // pnlLogin
             // 
+            this.pnlLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlLogin.Controls.Add(this.textBox2);
@@ -172,6 +159,7 @@
             // 
             // pictureLogo
             // 
+            this.pictureLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureLogo.BackColor = System.Drawing.Color.Transparent;
             this.pictureLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureLogo.Image")));
@@ -182,6 +170,20 @@
             this.pictureLogo.TabIndex = 11;
             this.pictureLogo.TabStop = false;
             // 
+            // labelName
+            // 
+            this.labelName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.Color.Transparent;
+            this.labelName.Font = new System.Drawing.Font("Yu Gothic Light", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelName.Location = new System.Drawing.Point(115, 104);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(281, 48);
+            this.labelName.TabIndex = 12;
+            this.labelName.Text = "Horta no Quintal";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,9 +192,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(518, 344);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.pictureLogo);
             this.Controls.Add(this.pnlLogin);
-            this.Controls.Add(this.label3);
             this.Name = "FrmLogin";
             this.ShowIcon = false;
             this.Text = "Login de usuário";
@@ -214,9 +216,9 @@
         private System.Windows.Forms.RadioButton rdb_user;
         private System.Windows.Forms.RadioButton rdb_Adm;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.PictureBox pictureLogo;
+        private System.Windows.Forms.Label labelName;
     }
 }
 

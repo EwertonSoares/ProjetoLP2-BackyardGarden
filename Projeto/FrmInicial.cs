@@ -27,5 +27,11 @@ namespace Login
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmEditarPerfil profile = new FrmEditarPerfil();
+            profile.ShowDialog();
+        }
     }
 }

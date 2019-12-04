@@ -131,3 +131,4 @@ C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.NovaHor
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.Frm_ShowTableInformation.resources
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.FrmCulturas.resources
 C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.FrmPDF.resources
+C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Projeto\obj\Debug\Login.FrmUpPass.resources

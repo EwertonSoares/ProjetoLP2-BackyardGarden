@@ -19,7 +19,7 @@ namespace Login
 
         private void btn_entarAdmin_Click(object sender, EventArgs e)
         {
-            string table;
+            //string table;
 
             if (rdb_Adm.Checked == true)
             {

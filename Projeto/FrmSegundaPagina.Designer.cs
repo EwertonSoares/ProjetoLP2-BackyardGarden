@@ -36,6 +36,7 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogout.BackColor = System.Drawing.Color.Red;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -51,6 +52,7 @@
             // 
             // btnHort
             // 
+            this.btnHort.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHort.Location = new System.Drawing.Point(12, 72);
             this.btnHort.Name = "btnHort";
             this.btnHort.Size = new System.Drawing.Size(330, 58);
@@ -61,6 +63,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,6 +78,7 @@
             // 
             // btn_Frt
             // 
+            this.btn_Frt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Frt.Location = new System.Drawing.Point(12, 172);
             this.btn_Frt.Name = "btn_Frt";
             this.btn_Frt.Size = new System.Drawing.Size(330, 58);

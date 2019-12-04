@@ -56,7 +56,7 @@ namespace Login
             hotGred.Columns[id].ReadOnly = true;
 
             int d;
-            int atr;
+            //int atr;
             int f = 0;
 
             string[] atributo = {"epoca", "colheita"};

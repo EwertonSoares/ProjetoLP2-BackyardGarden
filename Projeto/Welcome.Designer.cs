@@ -36,6 +36,7 @@
             // btn_welcome
             // 
             this.btn_welcome.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.btn_welcome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_welcome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_welcome.BackColor = System.Drawing.Color.Transparent;
             this.btn_welcome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -50,6 +51,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;

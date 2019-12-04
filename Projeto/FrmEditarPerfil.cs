@@ -15,10 +15,12 @@ namespace Login
 {
     public partial class FrmEditarPerfil : Form
     {
-        private BindingSource bind_source;
+        private BindingSource     bind_source;
         private NpgsqlDataAdapter data_adapter;
-        private DataTable data_table;
+        private DataTable         data_table;
 
+        private int id_usuario = 0;
+        
         public FrmEditarPerfil()
         {
             InitializeComponent();
@@ -26,56 +28,47 @@ namespace Login
 
         private void fmrEditarPerfil_Load(object sender, EventArgs e)
         {
-            string connection = @"Host=127.0.0.1,Username=postgres,Password=bruno2108,Database=newBd";
+            string connect = @"Host=127.0.0.1;Username=postgres;Password=bruno2108;Database=newBd";
 
-            string select = "SELECT * FROM usuarios";
+            string select = "SELECT NOME, SOBRENOME, EMAIL FROM usuarios WHERE TIPO = 'USER'";
 
-            string update = @"UPDATE usuarios SET " +
-                "nome=@nome" +
-                "sobrenome=@sobrenome" +
-                "email=@email" +
-                "senha=@senha";
+            string update = "UPDATE USUARIOS SET " +
+                            "nome=@nome, " +
+                            "sobrenome=@sobrenome, " +
+                            "email=@email" +
+                            "WHERE id_usuario=@id_usuario ;";
 
-            string delete = @"DELETE FROM usuarios WHERE email=@email";
-
-            NpgsqlConnection connect = new NpgsqlConnection(connection);
+            NpgsqlConnection conn = new NpgsqlConnection(connect);
 
             try
             {
-                data_adapter = new NpgsqlDataAdapter();
-                data_adapter.SelectCommand = new NpgsqlCommand(select, connect);
+                    data_adapter = new NpgsqlDataAdapter();
+                    data_adapter.SelectCommand = new NpgsqlCommand(select, conn);
 
-                data_adapter.UpdateCommand = new NpgsqlCommand(update, connect);
-                data_adapter.UpdateCommand.Parameters.Add("@nome", NpgsqlDbType.Varchar, 30, "nome");
-                data_adapter.UpdateCommand.Parameters.Add("@sobrenome", NpgsqlDbType.Varchar, 30, "sobrenome");
-                data_adapter.UpdateCommand.Parameters.Add("@email", NpgsqlDbType.Varchar, 300, "email");
-                data_adapter.UpdateCommand.Parameters.Add("@senha", NpgsqlDbType.Varchar, 30, "senha");
+                    data_adapter.UpdateCommand = new NpgsqlCommand(update, conn);
+                    data_adapter.UpdateCommand.Parameters.Add("@nome", NpgsqlDbType.Varchar, 30, "nome");
+                    data_adapter.UpdateCommand.Parameters.Add("@sobrenome", NpgsqlDbType.Varchar, 30, "sobrenome");
+                    data_adapter.UpdateCommand.Parameters.Add("@email", NpgsqlDbType.Varchar, 300, "email");
 
-                data_adapter.DeleteCommand = new NpgsqlCommand(delete, connect);
-                data_adapter.DeleteCommand.Parameters.Add("@email", NpgsqlDbType.Varchar, 30, "email");
+                    data_table = new DataTable();
+                    data_adapter.Fill(data_table);
 
-                data_table = new DataTable();
-                data_adapter.Fill(data_table);
+                    bind_source = new BindingSource();
+                    bind_source.DataSource = data_table;
 
-                bind_source = new BindingSource();
-                bind_source.DataSource = data_table;
-
-                txbNome.DataBindings.Add("Text", bind_source, "nome", true);
-                txbSobrenome.DataBindings.Add("Text", bind_source, "sobrenome", true);
-                txbEmail.DataBindings.Add("Text", bind_source, "email", true);
-                txbSenha.DataBindings.Add("Text", bind_source, "senha", true);
-                txbConfSenha.DataBindings.Add("Text", bind_source, "senha", true);
-                
+                    txbNome.DataBindings.Add("Text", bind_source, "nome", true);
+                    txbSobrenome.DataBindings.Add("Text", bind_source, "sobrenome", true);
+                    txbEmail.DataBindings.Add("Text", bind_source, "email", true);
             }
 
-            catch (NpgsqlException exception)
+            catch (NpgsqlException except)
             {
-                MessageBox.Show(exception.Message + exception.StackTrace);
+                MessageBox.Show(except.Message + except.StackTrace);
             }
 
             finally
             {
-                connect.Close();
+                conn.Close();
             }
         }
 
@@ -89,6 +82,12 @@ namespace Login
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             bind_source.CancelEdit();
+        }
+
+        private void buttonUpdPass_Click(object sender, EventArgs e)
+        {
+            FrmUpPass uppass = new FrmUpPass();
+            uppass.ShowDialog();
         }
     }
 }

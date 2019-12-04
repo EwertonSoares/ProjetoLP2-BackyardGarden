@@ -35,12 +35,13 @@
             // showData
             // 
             this.showData.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
+            this.showData.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.showData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.showData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.showData.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.showData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.showData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showData.Location = new System.Drawing.Point(3, 12);
+            this.showData.Location = new System.Drawing.Point(7, 11);
             this.showData.Name = "showData";
             this.showData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.showData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
