@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicial));
             this.btn_mylist = new System.Windows.Forms.Button();
             this.btn_newlist = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.labelWelcomeback = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -57,15 +57,15 @@
             this.btn_newlist.UseVisualStyleBackColor = true;
             this.btn_newlist.Click += new System.EventHandler(this.btn_newlist_Click);
             // 
-            // button1
+            // btnEdit
             // 
-            this.button1.Location = new System.Drawing.Point(137, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Editar perfil";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEdit.Location = new System.Drawing.Point(137, 3);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(68, 23);
+            this.btnEdit.TabIndex = 4;
+            this.btnEdit.Text = "Editar perfil";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // labelWelcomeback
             // 
@@ -87,7 +87,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(206, 231);
             this.Controls.Add(this.labelWelcomeback);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btn_newlist);
             this.Controls.Add(this.btn_mylist);
             this.Name = "FrmInicial";
@@ -102,7 +102,7 @@
 
         private System.Windows.Forms.Button btn_mylist;
         private System.Windows.Forms.Button btn_newlist;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label labelWelcomeback;
     }
 }

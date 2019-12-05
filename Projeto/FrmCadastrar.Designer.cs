@@ -51,7 +51,7 @@
             this.btn_cadastrando.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_cadastrando.Location = new System.Drawing.Point(135, 246);
             this.btn_cadastrando.Name = "btn_cadastrando";
-            this.btn_cadastrando.Size = new System.Drawing.Size(83, 23);
+            this.btn_cadastrando.Size = new System.Drawing.Size(84, 23);
             this.btn_cadastrando.TabIndex = 12;
             this.btn_cadastrando.Text = "Cadastrar";
             this.btn_cadastrando.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCancel.Location = new System.Drawing.Point(12, 246);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(83, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(84, 23);
             this.buttonCancel.TabIndex = 34;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@
             this.buttonClean.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClean.Location = new System.Drawing.Point(259, 246);
             this.buttonClean.Name = "buttonClean";
-            this.buttonClean.Size = new System.Drawing.Size(83, 23);
+            this.buttonClean.Size = new System.Drawing.Size(84, 23);
             this.buttonClean.TabIndex = 35;
             this.buttonClean.Text = "Limpar Dados";
             this.buttonClean.UseVisualStyleBackColor = true;

@@ -16,7 +16,8 @@ namespace Login
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEditarPerfil());
+            //Application.Run(new FrmAdmin());
+            Application.Run(new FrmLogin());
         }
     }
 }

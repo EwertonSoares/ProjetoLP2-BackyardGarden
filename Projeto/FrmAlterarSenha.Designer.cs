@@ -39,30 +39,30 @@
             // 
             // txbNome
             // 
-            this.txbNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbNome.Location = new System.Drawing.Point(54, 75);
+            this.txbNome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbNome.Location = new System.Drawing.Point(45, 67);
             this.txbNome.Name = "txbNome";
             this.txbNome.PasswordChar = '•';
-            this.txbNome.Size = new System.Drawing.Size(127, 20);
+            this.txbNome.Size = new System.Drawing.Size(152, 20);
             this.txbNome.TabIndex = 14;
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(54, 136);
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(45, 128);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '•';
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
+            this.textBox1.Size = new System.Drawing.Size(152, 20);
             this.textBox1.TabIndex = 15;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(51, 59);
+            this.label1.Location = new System.Drawing.Point(42, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 30;
@@ -70,12 +70,12 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(51, 120);
+            this.label2.Location = new System.Drawing.Point(42, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 13);
             this.label2.TabIndex = 31;
@@ -83,7 +83,8 @@
             // 
             // buttonSavePass
             // 
-            this.buttonSavePass.Location = new System.Drawing.Point(126, 186);
+            this.buttonSavePass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSavePass.Location = new System.Drawing.Point(77, 205);
             this.buttonSavePass.Name = "buttonSavePass";
             this.buttonSavePass.Size = new System.Drawing.Size(95, 23);
             this.buttonSavePass.TabIndex = 32;
@@ -92,12 +93,14 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(12, 186);
+            this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCancel.Location = new System.Drawing.Point(77, 234);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(95, 23);
             this.buttonCancel.TabIndex = 33;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // FrmUpPass
             // 
@@ -105,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(233, 221);
+            this.ClientSize = new System.Drawing.Size(245, 289);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSavePass);
             this.Controls.Add(this.label2);

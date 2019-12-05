@@ -50,7 +50,7 @@
             // 
             this.ckb1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ckb1.FormattingEnabled = true;
-            this.ckb1.Location = new System.Drawing.Point(488, 28);
+            this.ckb1.Location = new System.Drawing.Point(12, 205);
             this.ckb1.Name = "ckb1";
             this.ckb1.Size = new System.Drawing.Size(120, 94);
             this.ckb1.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             this.ckb2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ckb2.FormattingEnabled = true;
-            this.ckb2.Location = new System.Drawing.Point(488, 142);
+            this.ckb2.Location = new System.Drawing.Point(175, 205);
             this.ckb2.Name = "ckb2";
             this.ckb2.Size = new System.Drawing.Size(120, 94);
             this.ckb2.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.ckb3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ckb3.FormattingEnabled = true;
-            this.ckb3.Location = new System.Drawing.Point(488, 255);
+            this.ckb3.Location = new System.Drawing.Point(339, 205);
             this.ckb3.Name = "ckb3";
             this.ckb3.Size = new System.Drawing.Size(120, 94);
             this.ckb3.TabIndex = 3;
@@ -76,9 +76,9 @@
             // buttonSave
             // 
             this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSave.Location = new System.Drawing.Point(61, 246);
+            this.buttonSave.Location = new System.Drawing.Point(14, 326);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(126, 23);
+            this.buttonSave.Size = new System.Drawing.Size(166, 23);
             this.buttonSave.TabIndex = 4;
             this.buttonSave.Text = "Salvar";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -86,9 +86,9 @@
             // buttonDel
             // 
             this.buttonDel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonDel.Location = new System.Drawing.Point(296, 246);
+            this.buttonDel.Location = new System.Drawing.Point(305, 326);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(114, 23);
+            this.buttonDel.Size = new System.Drawing.Size(154, 23);
             this.buttonDel.TabIndex = 5;
             this.buttonDel.Text = "Deletar";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 361);
+            this.ClientSize = new System.Drawing.Size(483, 361);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.ckb3);

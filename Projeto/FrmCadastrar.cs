@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//biblioteca Npgsql
+using Npgsql;
+using NpgsqlTypes;
+
 namespace Login
 {
     public partial class FrmCadastrar : Form
@@ -22,11 +26,28 @@ namespace Login
 
         private void FormCadastrar_Load(object sender, EventArgs e)
         {
+            string connection = @"Host=127.0.0.1;Username=postgres;Password=brun2108;Database=newBd";
+
             string insert = "INSERT INTO USUARIOS" +
                 "(NOME, SOBRENOME, EMAIL, SENHA)" + 
                 "VALUES (@NOME, @SOBRENOME, @EMAIL, @SENHA);";
 
+            NpgsqlConnection conn = new NpgsqlConnection(connection);
+            
+            try
+            {
+             
+            }
 
+            catch
+            {
+
+            }
+
+            finally
+            {
+
+            }
         }
 
         private void btn_cadastrando_Click(object sender, EventArgs e)

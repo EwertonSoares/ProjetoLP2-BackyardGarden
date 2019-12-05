@@ -13,10 +13,14 @@ namespace Login
     public partial class FrmLogin : Form
     {
         UsersLogin db = new UsersLogin();
+
         public FrmLogin()
         {
             InitializeComponent();
         }
+
+        string value;
+
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string typeOfUser = "USER";
@@ -24,18 +28,20 @@ namespace Login
             if (rdb_user.Checked == true)
             {
                 //Passando tabela usuarios como paramentro
-                bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
+                value = txbUser.Text;
+
+                bool isAnUser = db.verifingUserLogin(txbUser.Text, txtSenha.Text, typeOfUser);
 
                 if (isAnUser)
                 {
-                    FrmInicial pagina = new FrmInicial();
+                    FrmInicial pagina = new FrmInicial(value);
                     pagina.ShowDialog();
                 }
                 else
                 {
                     MessageBox.Show("Login ou senha invalidos.");
-                    textBox1.Text = "";
-                    textBox2.Text = "";
+                    txbUser.Text = "";
+                    txtSenha.Text = "";
                 }
             }
 
@@ -44,7 +50,7 @@ namespace Login
                 typeOfUser = "ADM";
 
                 //Passando tabela administradores como parametro
-                bool isAnUser = db.verifingUserLogin(textBox1.Text, textBox2.Text, typeOfUser);
+                bool isAnUser = db.verifingUserLogin(txbUser.Text, txtSenha.Text, typeOfUser);
 
                 if (isAnUser)
                 {
@@ -54,8 +60,8 @@ namespace Login
                 else
                 {
                     MessageBox.Show("Login ou senha invalidos.");
-                    textBox1.Text = "";
-                    textBox2.Text = "";
+                    txbUser.Text = "";
+                    txtSenha.Text = "";
                 }
             }
 
@@ -70,8 +76,8 @@ namespace Login
 
         private void editar_Click(object sender, EventArgs e)
         {
-            FrmEditarPerfil editar = new FrmEditarPerfil();
-            editar.ShowDialog();
+           /* FrmEditarPerfil editar = new FrmEditarPerfil();
+            editar.ShowDialog();*/
         }
 
         private void label3_Click(object sender, EventArgs e)
