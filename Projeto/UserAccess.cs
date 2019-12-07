@@ -11,6 +11,7 @@ namespace Login
         Connection connected = new Connection();
 
         string select;
+        string insert;
         string update;
 
         DataTable dt = new DataTable();
@@ -25,7 +26,7 @@ namespace Login
             {
                 //Abrindo conexão com p PgSQL e definindo etrutura SQL
                 connected.pgsqlConnection.Open();
-                 select = String.Format("Select nome,sobrenome, email from usuarios where email = '{0}'", email);
+                 select = String.Format("Select nome, sobrenome, email from usuarios where email = '{0}'", email);
 
                 using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(select, connected.pgsqlConnection))
                 {
@@ -49,6 +50,76 @@ namespace Login
             return dt;
         }
 
+        //senha
+        public void updPassword(string senha, string email)
+        {
+            connected.pgsqlConnection = new NpgsqlConnection(connected.conn);
+
+            try
+            {
+                connected.pgsqlConnection.Open();
+
+                update = String.Format("Update usuarios set senha = '{0}' where email = '{1}' ", senha, email);
+
+                using (NpgsqlCommand adpt = new NpgsqlCommand(insert, connected.pgsqlConnection))
+                {
+                    adpt.ExecuteNonQuery();
+                }
+            }
+
+            catch (NpgsqlException ex)
+            {
+                throw ex;
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                connected.pgsqlConnection.Close();
+            }
+        }
+
+        public void addUser(string nome, string sobrenome, string email, string senha)
+        {
+            connected.pgsqlConnection = new NpgsqlConnection(connected.conn);
+
+
+            try
+            {
+                connected.pgsqlConnection.Open();
+
+                insert = String.Format("Insert into usuarios (nome, sobrenome, email, senha, tipo)" +
+                    " values('{0}','{1}','{2}','{3}','USER')", nome, sobrenome, email, senha);
+
+                using (NpgsqlCommand adpt = new NpgsqlCommand(insert, connected.pgsqlConnection))
+                {
+                    adpt.ExecuteNonQuery();
+                }
+
+            }
+
+            catch (NpgsqlException ex)
+            {
+                throw ex;
+            }
+
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                connected.pgsqlConnection.Close();
+            }
+
+
+        }
+
         public void updUser(string nome, string sobrenome, string email, string emailValue)
         {
             
@@ -67,15 +138,17 @@ namespace Login
                     adpt.ExecuteNonQuery();
                 }
             }
+
             catch (NpgsqlException ex)
             {
                 throw ex;
             }
+
             catch (Exception ex)
             {
                 throw ex;
-
             }
+
             finally
             {
                 connected.pgsqlConnection.Close();

@@ -12,14 +12,26 @@ namespace Login
 {
     public partial class FrmUpPass : Form
     {
+        UserAccess acesso = new UserAccess(); 
+
         public FrmUpPass()
         {
             InitializeComponent();
         }
 
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void FrmUpPass_Load(object sender, EventArgs e)
+        { 
+
+        }
+
+        private void buttonSavePass_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

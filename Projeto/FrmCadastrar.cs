@@ -17,7 +17,14 @@ namespace Login
 {
     public partial class FrmCadastrar : Form
     {
-        
+        bool newuser;
+
+        string connection = @"Host=127.0.0.1;Username=postgres;Password=bruno2108;Database=newBD";
+
+        string insert = "Insert into usuarios (nome, sobrenome, email, senha)" +
+                        "value (@nome, @sobrenome, @email, @senha)";
+
+        UserAccess acesso = new UserAccess();
 
         public FrmCadastrar()
         {
@@ -26,67 +33,41 @@ namespace Login
 
         private void FormCadastrar_Load(object sender, EventArgs e)
         {
-            string connection = @"Host=127.0.0.1;Username=postgres;Password=brun2108;Database=newBd";
-
-            string insert = "INSERT INTO USUARIOS" +
-                "(NOME, SOBRENOME, EMAIL, SENHA)" + 
-                "VALUES (@NOME, @SOBRENOME, @EMAIL, @SENHA);";
-
-            NpgsqlConnection conn = new NpgsqlConnection(connection);
             
-            try
-            {
-             
-            }
-
-            catch
-            {
-
-            }
-
-            finally
-            {
-
-            }
         }
 
         private void btn_cadastrando_Click(object sender, EventArgs e)
         {
-            bool senha = true;
-
-            //Verificando se a senha e confirmar senha são diferentes
-            do
-            {
-                if (textBox4.Text != textBox5.Text)
+            acesso.addUser(txbNome.Text, txbSobrenome.Text, txbEmail.Text, txbSenha.Text);
+            MessageBox.Show("Cadastro realizado com sucesso!!", "Use seus dados cadastrados para realizar o Login!!");
+            /*bool senha = true;
+            //Verificando se a senha e confirmar senha são diferentes         
+                if (txbSenha.Text != txbConfSenha.Text)
                 {
-                    textBox4.Text = "";
-                    textBox5.Text = "";
+                    txbSenha.Text = "";
+                    txbConfSenha.Text = "";
                     senha = false;
                     MessageBox.Show("Tente novamente!", "Senhas divergentes", MessageBoxButtons.OK, MessageBoxIcon.Error);       
                 }
-             
-            } while (senha != true);
-
+            
             //Verificando se a senha tem menos de 8 caracteries
-            do
-            { 
-                if (textBox4.Text.Length < 8 || textBox5.Text.Length < 8)
+                if (txbSenha.Text.Length < 8 || txbConfSenha.Text.Length < 8)
                 {
                     senha = false;
-                    textBox4.Text = "";
-                    textBox5.Text = "";
+                    txbSenha.Text = "";
+                    txbConfSenha.Text = "";
                     MessageBox.Show("Senha deve conter no minimo 8 digitos", "Senha Invalida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-            } while (senha != true);
-
+            
+            acesso.addUser(txbNome.Text, txbSobrenome.Text, txbMail.Text, txbSenha.Text);
+            MessageBox.Show("Cadastro realizado com sucesso!!");*/
 
             //Cadastrando novo usuario
-            /*bool sucesso = true;
+            bool sucesso = true;
 
-                Usuario novoUsuario = new Usuario();
-                novoUsuario.setUser(textBox1.Text, textBox2.Text, textBox3.Text, 
-                textBox4.Text, textBox5.Text);
+                /*Usuario novoUsuario = new Usuario();
+                novoUsuario.setUser(txbNome.Text, txbSobrenome.Text, txbMail.Text, 
+                txbSenha.Text, txbConfSenha.Text);*/
 
 
                 // Enviar objeto para o banco de dados caso o objeto seja salvo
@@ -102,13 +83,13 @@ namespace Login
                 else
                 {
                     MessageBox.Show("Não foi possivel fazer o cadastro, tente novamente", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        textBox1.Text = "";
-                        textBox2.Text = "";
-                        textBox3.Text = "";
-                        textBox4.Text = "";
-                        textBox5.Text = "";
-               }*/
-
+                        txbNome.Text = "";
+                        txbSobrenome.Text = "";
+                        txbEmail.Text = "";
+                        txbSenha.Text = "";
+                        txbConfSenha.Text = "";
+               }
         }
+
     }
 }

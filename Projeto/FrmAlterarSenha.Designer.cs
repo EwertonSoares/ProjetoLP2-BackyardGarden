@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpPass));
-            this.txbNome = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbnovaSenha = new System.Windows.Forms.TextBox();
+            this.tbxConfirm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSavePass = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txbNome
+            // txbnovaSenha
             // 
-            this.txbNome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbNome.Location = new System.Drawing.Point(45, 67);
-            this.txbNome.Name = "txbNome";
-            this.txbNome.PasswordChar = '•';
-            this.txbNome.Size = new System.Drawing.Size(152, 20);
-            this.txbNome.TabIndex = 14;
+            this.txbnovaSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbnovaSenha.Location = new System.Drawing.Point(45, 67);
+            this.txbnovaSenha.Name = "txbnovaSenha";
+            this.txbnovaSenha.PasswordChar = '•';
+            this.txbnovaSenha.Size = new System.Drawing.Size(152, 20);
+            this.txbnovaSenha.TabIndex = 14;
             // 
-            // textBox1
+            // tbxConfirm
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(45, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '•';
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 15;
+            this.tbxConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbxConfirm.Location = new System.Drawing.Point(45, 128);
+            this.tbxConfirm.Name = "tbxConfirm";
+            this.tbxConfirm.PasswordChar = '•';
+            this.tbxConfirm.Size = new System.Drawing.Size(152, 20);
+            this.tbxConfirm.TabIndex = 15;
             // 
             // label1
             // 
@@ -90,6 +90,7 @@
             this.buttonSavePass.TabIndex = 32;
             this.buttonSavePass.Text = "Salvar senha";
             this.buttonSavePass.UseVisualStyleBackColor = true;
+            this.buttonSavePass.Click += new System.EventHandler(this.buttonSavePass_Click);
             // 
             // buttonCancel
             // 
@@ -113,11 +114,12 @@
             this.Controls.Add(this.buttonSavePass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txbNome);
+            this.Controls.Add(this.tbxConfirm);
+            this.Controls.Add(this.txbnovaSenha);
             this.Name = "FrmUpPass";
             this.ShowIcon = false;
             this.Text = "Alterar senha";
+            this.Load += new System.EventHandler(this.FrmUpPass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,8 +127,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txbNome;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbnovaSenha;
+        private System.Windows.Forms.TextBox tbxConfirm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonSavePass;

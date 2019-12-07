@@ -41,7 +41,7 @@ namespace Login
         private void btn_editarPerfil_Click(object sender, EventArgs e)
         {
             acesso.updUser(txbNome.Text, txbSobrenome.Text, txbEmail.Text, emailValue);
-            MessageBox.Show("Editado com sucesso");
+            MessageBox.Show("Editado com sucesso!!");
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
