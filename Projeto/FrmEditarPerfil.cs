@@ -38,11 +38,7 @@ namespace Login
             txbEmail.Text = dados[2];
         }
 
-        private void btn_editarPerfil_Click(object sender, EventArgs e)
-        {
-            acesso.updUser(txbNome.Text, txbSobrenome.Text, txbEmail.Text, emailValue);
-            MessageBox.Show("Editado com sucesso!!");
-        }
+
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -51,8 +47,14 @@ namespace Login
 
         private void buttonUpdPass_Click(object sender, EventArgs e)
         {
-            FrmUpPass uppass = new FrmUpPass();
+            FrmUpPass uppass = new FrmUpPass(emailValue);
             uppass.ShowDialog();
+        }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            acesso.updUser(txbNome.Text, txbSobrenome.Text, txbEmail.Text, emailValue);
+            MessageBox.Show("Editado com sucesso!!");
         }
     }
 }

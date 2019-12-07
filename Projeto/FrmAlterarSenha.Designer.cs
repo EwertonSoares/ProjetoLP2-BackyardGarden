@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpPass));
-            this.txbnovaSenha = new System.Windows.Forms.TextBox();
-            this.tbxConfirm = new System.Windows.Forms.TextBox();
+            this.txb_novaSenha = new System.Windows.Forms.TextBox();
+            this.txb_Confirm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSavePass = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txbnovaSenha
+            // txb_novaSenha
             // 
-            this.txbnovaSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbnovaSenha.Location = new System.Drawing.Point(45, 67);
-            this.txbnovaSenha.Name = "txbnovaSenha";
-            this.txbnovaSenha.PasswordChar = '•';
-            this.txbnovaSenha.Size = new System.Drawing.Size(152, 20);
-            this.txbnovaSenha.TabIndex = 14;
+            this.txb_novaSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txb_novaSenha.Location = new System.Drawing.Point(45, 67);
+            this.txb_novaSenha.Name = "txb_novaSenha";
+            this.txb_novaSenha.PasswordChar = '•';
+            this.txb_novaSenha.Size = new System.Drawing.Size(152, 20);
+            this.txb_novaSenha.TabIndex = 14;
             // 
-            // tbxConfirm
+            // txb_Confirm
             // 
-            this.tbxConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbxConfirm.Location = new System.Drawing.Point(45, 128);
-            this.tbxConfirm.Name = "tbxConfirm";
-            this.tbxConfirm.PasswordChar = '•';
-            this.tbxConfirm.Size = new System.Drawing.Size(152, 20);
-            this.tbxConfirm.TabIndex = 15;
+            this.txb_Confirm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txb_Confirm.Location = new System.Drawing.Point(45, 128);
+            this.txb_Confirm.Name = "txb_Confirm";
+            this.txb_Confirm.PasswordChar = '•';
+            this.txb_Confirm.Size = new System.Drawing.Size(152, 20);
+            this.txb_Confirm.TabIndex = 15;
             // 
             // label1
             // 
@@ -84,9 +84,9 @@
             // buttonSavePass
             // 
             this.buttonSavePass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSavePass.Location = new System.Drawing.Point(77, 205);
+            this.buttonSavePass.Location = new System.Drawing.Point(45, 183);
             this.buttonSavePass.Name = "buttonSavePass";
-            this.buttonSavePass.Size = new System.Drawing.Size(95, 23);
+            this.buttonSavePass.Size = new System.Drawing.Size(152, 23);
             this.buttonSavePass.TabIndex = 32;
             this.buttonSavePass.Text = "Salvar senha";
             this.buttonSavePass.UseVisualStyleBackColor = true;
@@ -95,9 +95,9 @@
             // buttonCancel
             // 
             this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCancel.Location = new System.Drawing.Point(77, 234);
+            this.buttonCancel.Location = new System.Drawing.Point(45, 212);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(95, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(152, 23);
             this.buttonCancel.TabIndex = 33;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -114,8 +114,8 @@
             this.Controls.Add(this.buttonSavePass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbxConfirm);
-            this.Controls.Add(this.txbnovaSenha);
+            this.Controls.Add(this.txb_Confirm);
+            this.Controls.Add(this.txb_novaSenha);
             this.Name = "FrmUpPass";
             this.ShowIcon = false;
             this.Text = "Alterar senha";
@@ -127,8 +127,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txbnovaSenha;
-        private System.Windows.Forms.TextBox tbxConfirm;
+        private System.Windows.Forms.TextBox txb_novaSenha;
+        private System.Windows.Forms.TextBox txb_Confirm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonSavePass;

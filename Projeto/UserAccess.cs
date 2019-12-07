@@ -61,7 +61,7 @@ namespace Login
 
                 update = String.Format("Update usuarios set senha = '{0}' where email = '{1}' ", senha, email);
 
-                using (NpgsqlCommand adpt = new NpgsqlCommand(insert, connected.pgsqlConnection))
+                using (NpgsqlCommand adpt = new NpgsqlCommand(update, connected.pgsqlConnection))
                 {
                     adpt.ExecuteNonQuery();
                 }

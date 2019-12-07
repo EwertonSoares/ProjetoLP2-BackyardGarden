@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditarPerfil));
-            this.btn_editarPerfil = new System.Windows.Forms.Button();
+            this.btn_salvar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbNome = new System.Windows.Forms.TextBox();
@@ -42,17 +42,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_editarPerfil
+            // btn_salvar
             // 
-            this.btn_editarPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_editarPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_editarPerfil.Location = new System.Drawing.Point(67, 288);
-            this.btn_editarPerfil.Name = "btn_editarPerfil";
-            this.btn_editarPerfil.Size = new System.Drawing.Size(171, 23);
-            this.btn_editarPerfil.TabIndex = 25;
-            this.btn_editarPerfil.Text = "Editar Perfil";
-            this.btn_editarPerfil.UseVisualStyleBackColor = true;
-            this.btn_editarPerfil.Click += new System.EventHandler(this.btn_editarPerfil_Click);
+            this.btn_salvar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salvar.Location = new System.Drawing.Point(87, 277);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(119, 23);
+            this.btn_salvar.TabIndex = 25;
+            this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // label2
             // 
@@ -121,7 +121,7 @@
             // 
             this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCancel.Location = new System.Drawing.Point(67, 317);
+            this.buttonCancel.Location = new System.Drawing.Point(12, 12);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 30;
@@ -133,9 +133,9 @@
             // 
             this.buttonUpdPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonUpdPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUpdPass.Location = new System.Drawing.Point(163, 317);
+            this.buttonUpdPass.Location = new System.Drawing.Point(87, 316);
             this.buttonUpdPass.Name = "buttonUpdPass";
-            this.buttonUpdPass.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdPass.Size = new System.Drawing.Size(119, 23);
             this.buttonUpdPass.TabIndex = 31;
             this.buttonUpdPass.Text = "Alterar senha";
             this.buttonUpdPass.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblSobrenome);
             this.Controls.Add(this.txbSobrenome);
-            this.Controls.Add(this.btn_editarPerfil);
+            this.Controls.Add(this.btn_salvar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.txbNome);
@@ -182,7 +182,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_editarPerfil;
+        private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.TextBox txbNome;

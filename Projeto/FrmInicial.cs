@@ -39,8 +39,7 @@ namespace Login
                 valores.Add(valor1);
                 valores.Add(valor2);
                 valores.Add(valor3);
-                
-
+               
             }
 
             return valores;
@@ -51,11 +50,6 @@ namespace Login
         {
             FrmSegundaPagina segunda = new FrmSegundaPagina();
             segunda.ShowDialog();
-        }
-
-        private void btn_mylist_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

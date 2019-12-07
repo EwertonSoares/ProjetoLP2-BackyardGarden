@@ -44,7 +44,6 @@
             this.btn_mylist.TabIndex = 2;
             this.btn_mylist.Text = "Meus relatórios";
             this.btn_mylist.UseVisualStyleBackColor = true;
-            this.btn_mylist.Click += new System.EventHandler(this.btn_mylist_Click);
             // 
             // btn_newlist
             // 

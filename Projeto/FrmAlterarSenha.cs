@@ -12,11 +12,15 @@ namespace Login
 {
     public partial class FrmUpPass : Form
     {
-        UserAccess acesso = new UserAccess(); 
+        UserAccess acesso = new UserAccess();
 
-        public FrmUpPass()
+        string emailValue;
+
+        public FrmUpPass(string value)
         {
             InitializeComponent();
+
+            this.emailValue = value;
         }
 
         private void FrmUpPass_Load(object sender, EventArgs e)
@@ -26,7 +30,8 @@ namespace Login
 
         private void buttonSavePass_Click(object sender, EventArgs e)
         {
-
+            acesso.updPassword(txb_novaSenha.Text, emailValue);
+            MessageBox.Show("Senha alterada com sucesso");
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
