@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
 using System.IO;
 using iTextSharp;
 using iTextSharp.text;
@@ -14,15 +14,155 @@ namespace Login
 {
     class NovoRelatorio
     {
+        DataTable dt = new DataTable();
         Paragrafos novoparagrafo = new Paragrafos();
+        InnerClass join = new InnerClass();
+
+        HashSet<string> lista = new HashSet<string>();
+        HashSet<string> fontes = new HashSet<string>();
+        HashSet<string> pragas = new HashSet<string>();
+        HashSet<string> doencas = new HashSet<string>();
+
+
         public string caminho;
 
-        public void gerarRelatorio(string nome)
+        public HashSet<string> ConverVegetableToString(DataTable table)
         {
+            HashSet<string> vegetable = new HashSet<string>();
+            string semeadura;
+            string tratos;
+            string fonte;
+            string praga;
+            string doenca;
+            string transpante;
+
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+
+                string nome = (string)table.Rows[i]["Nome"];
+                string epoca = (string)table.Rows[i]["epoca"];
+                string propagacao = (string)table.Rows[i]["propagacao"];
+                bool tipoSemeadura = (bool)table.Rows[i]["semeadura"];
+
+                vegetable.Add(nome);
+                vegetable.Add(epoca);
+                vegetable.Add(propagacao);
+
+                //Tratando semeadura caso seja nula
+                if (tipoSemeadura == true)
+                {
+                    semeadura = "SIM";
+                    vegetable.Add(semeadura);
+
+                }
+                else
+                {
+                    semeadura = "NAO";
+                    vegetable.Add(semeadura);
+
+                }
+
+
+                //Tratando casos em que trasplante é nulo
+                if (table.Rows[i]["transplante"] == DBNull.Value)
+                {
+                    transpante = "--";
+                    vegetable.Add(transpante);
+                }
+                else
+                {
+                    transpante = (string)table.Rows[i]["transplante"];
+                    vegetable.Add(transpante);
+                }
+
+                string espacamento = (string)table.Rows[i]["espacamento"];
+                string colheita = (string)table.Rows[i]["colheita"];
+                string produtividade = (string)table.Rows[i]["produtividade"];
+                string irrigacao = (string)table.Rows[i]["irrigacao"];
+
+                vegetable.Add(espacamento);
+                vegetable.Add(colheita);
+                vegetable.Add(produtividade);
+                vegetable.Add(irrigacao);
+
+
+                //Tratando casos em que tratos culturais é nulo
+                if (table.Rows[i]["tratos_culturais"] == DBNull.Value)
+                {
+                    tratos = "--";
+                }
+                else
+                {
+                    tratos = (string)table.Rows[i]["tratos_culturais"];
+                }
+
+
+                //Validadndo as fontes caso ela seja nula
+                if (table.Rows[i]["fonte"] == DBNull.Value)
+                {
+                    fonte = "--";
+                    fontes.Add(fonte);
+
+                }
+                else
+                {
+                    fonte = (string)table.Rows[i]["fonte"];
+                    fontes.Add(fonte);
+                }
+
+                //Validadndo pragas caso ela seja nula
+                if (table.Rows[i]["pragas"] == DBNull.Value)
+                {
+                    praga = "--";
+                    pragas.Add(praga);
+
+                }
+                else
+                {
+                    praga = (string)table.Rows[i]["pragas"];
+                    pragas.Add(praga);
+                }
+
+
+                //Validadndo doenças caso ela seja nula
+                if (table.Rows[i]["doencas"] == DBNull.Value)
+                {
+                    doenca = "--";
+                    doencas.Add(doenca);
+
+                }
+                else
+                {
+                    doenca = (string)table.Rows[i]["doencas"];
+                    doencas.Add(doenca);
+                }
+
+
+                vegetable.Add(tratos);
+            }
+
+            return vegetable;
+        }
+
+        public void gerarRelatorio(string nome, string tableName)
+        {
+
+            if (tableName == "HORTALICAS")
+            {
+                dt = join.vegetablesInformation(nome);
+
+                lista = ConverVegetableToString(dt);
+            }
+            else
+            {
+                join.vegetablesInformation(nome);
+            }
+
+            //Usando classe Document para iniciar criação do pdf com modelo A4
+            Document doc = new Document(PageSize.A4);
             try
             {
-                //Usando classe Document para iniciar criação do pdf com modelo A4
-                Document doc = new Document(PageSize.A4);
+
                 // Definindo margins
                 doc.SetMargins(40, 40, 40, 80);
                 doc.AddCreationDate();
@@ -36,7 +176,7 @@ namespace Login
                 doc.Open();
 
                 //Adicionando imagem no arquivo
-                string logo = "https://cdn.pixabay.com/photo/2015/11/26/20/29/sol-1064482_960_720.png";
+                string logo = @"C:\Users\bruno\Desktop\ProjetoLP2-BackyardGarden\Imagems\folhahortanoquintal.png";
                 Image img = Image.GetInstance(logo);
                 img.ScaleAbsolute(100, 120);
                 doc.Add(img);
@@ -88,19 +228,11 @@ namespace Login
                 primeiraTabela.AddCell(p12);
 
                 //Linha 2 até a coluna 12
-                for (int i = 1; i <= 12; i++)
+                for (int i = 0; i < lista.Count; i++)
                 {
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
-                    primeiraTabela.AddCell(i.ToString());
+                    string aux = lista.ElementAt(i);
+
+                    primeiraTabela.AddCell(aux);
                 }
                 doc.Add(primeiraTabela);
 
@@ -187,11 +319,14 @@ namespace Login
                 setimoParagrafo.Add(setimoConteudo);
                 doc.Add(setimoParagrafo);
 
-                doc.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                doc.Close();
             }
 
         }

@@ -32,12 +32,13 @@ namespace Login
             products.ShowDialog();
         }
 
+        //Chamando datagridview para exibir todas as hortalicas
         private void btnHort_Click(object sender, EventArgs e)
         {
             {       
                 try
                 {
-                    exibir("Hortalicas");
+                    exibir("HORTALICAS");
                 }
                 catch (Exception ex)
                 {
@@ -46,12 +47,13 @@ namespace Login
             }
         }
 
+        //Chamando datagridview para exibir todas as frutiferas
         private void btn_Frt_Click(object sender, EventArgs e)
         {
             {
                 try
                 {
-                    exibir("Frutiferas");
+                    exibir("FRUTIFERAS");
                 }
                 catch (Exception ex)
                 {

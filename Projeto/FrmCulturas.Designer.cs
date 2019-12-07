@@ -43,7 +43,7 @@
             this.hotGred.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hotGred.Location = new System.Drawing.Point(12, 28);
             this.hotGred.Name = "hotGred";
-            this.hotGred.Size = new System.Drawing.Size(447, 150);
+            this.hotGred.Size = new System.Drawing.Size(459, 150);
             this.hotGred.TabIndex = 0;
             // 
             // ckb1

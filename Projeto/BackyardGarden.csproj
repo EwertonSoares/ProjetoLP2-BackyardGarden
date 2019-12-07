@@ -73,6 +73,7 @@
     <Compile Include="FrmPDF.Designer.cs">
       <DependentUpon>FrmPDF.cs</DependentUpon>
     </Compile>
+    <Compile Include="InnerClass.cs" />
     <Compile Include="NovaFrutifera.cs">
       <SubType>Form</SubType>
     </Compile>

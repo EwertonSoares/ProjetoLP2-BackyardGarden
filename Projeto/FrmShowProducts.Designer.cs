@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.showData = new System.Windows.Forms.DataGridView();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.showData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,12 +42,17 @@
             this.showData.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.showData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.showData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showData.Location = new System.Drawing.Point(7, 11);
+            this.showData.Location = new System.Drawing.Point(-3, 14);
             this.showData.Name = "showData";
-            this.showData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.showData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.showData.Size = new System.Drawing.Size(334, 252);
+            this.showData.Size = new System.Drawing.Size(440, 239);
             this.showData.TabIndex = 0;
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(442, 12);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(16, 252);
+            this.vScrollBar1.TabIndex = 1;
             // 
             // showProducts
             // 
@@ -54,7 +60,8 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(1, 1);
             this.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.ClientSize = new System.Drawing.Size(346, 263);
+            this.ClientSize = new System.Drawing.Size(462, 263);
+            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.showData);
             this.Name = "showProducts";
             this.Text = "Products";
@@ -67,5 +74,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView showData;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }

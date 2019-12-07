@@ -45,7 +45,7 @@ namespace Login
 
         private void btn_Test_Click(object sender, EventArgs e)
         {
-            novoRel.gerarRelatorio("Teste");
+            //novoRel.gerarRelatorio("Teste");
         }
     }
 }
